@@ -58,10 +58,10 @@
     </section>
 
     <section class="page-main__popular-product popular-product">
-      <header class="popular-product__header">
-        <!-- Сначала здесь поставил <h2 class="visually-hidden">Товар недели</h2>, но потом решил убрать, так как в тексте уже есть такое содержимое
-        и оставил "Вязаные корзинки" в h2 хотя немного сомневаюсь еще -->
-        <div class="popular-product__container container">
+      <div class="popular-product__container container">
+        <header class="popular-product__header">
+          <!-- Сначала здесь поставил <h2 class="visually-hidden">Товар недели</h2>, но потом решил убрать, так как в тексте уже есть такое содержимое
+            и оставил "Вязаные корзинки" в h2 хотя немного сомневаюсь еще -->
           <h2 class="popular-product__title title">Вязаные корзинки</h2>
           <p class="popular-product__subtitle">Товар недели</p>
           <p class="popular-product__description">
@@ -86,7 +86,7 @@
         <img class="popular-product__image" src="img/products/baskets.jpg" alt="Три вязаных корзинки">
         <strong class="popular-product__price">Цена: 990 руб.</strong>
         <button class="popular-product__button button" type="button">Заказать</button>
-        </div>
+      </div>
     </section>
 
     <section class="page-main__about about">
@@ -127,8 +127,10 @@
               и мои фотографии сразу стали более стильными, а также набирают больше лайков!
             </p>
             <div class="reviews__author-info">
-              <cite class="reviews__author-name">Анастасия Красильникова</cite>
-              <cite class="reviews__author-nickname">@misssssiskras</cite>
+              <cite class="reviews__author-name">
+                Анастасия Красильникова
+                <span class="reviews__author-nickname">@misssssiskras</span>
+              </cite>
             </div>
           </blockquote>
         </div>
@@ -201,6 +203,7 @@
     </div>
   </footer>
   <section class="page__modal-basket modal-basket">
+    <h2 class="visually-hidden">Выбор размера товара</h2>
     <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="post">
       <p class="modal-basket__text">Добавить в корзину</p>
 
@@ -220,7 +223,7 @@
     <div class="modal-basket__fade"></div>
   </section>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=f1bfa766-8bde-449e-9c51-36d3a2651f95&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f1bfa766-8bde-449e-9c51-36d3a2651f95&lang=ru_RU"></script>
   <script src="js/map.js"></script>
 </body>
 
