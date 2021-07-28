@@ -10,42 +10,42 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <title>HTML Academy: Мишка</title>
+  <title>Магазин игрушек «Мишка»</title>
 </head>
-
 <body class="page__body">
 
   <header class="page__page-header page-header">
     <div class="page-header__container container">
       <nav class="page-header__navigation navigation">
-        <img class="navigation__logo logo" src="img/logo-mobile.svg" alt="">
+        <a class="navigation__link-logo">
+          <img class="navigation__logo logo" src="img/logo-mobile.svg" alt="">
+        </a>
         <button class="navigation__toggle"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Каталог товаров</a>
+        <ul class="navigation__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Каталог товаров</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Вязание на заказ</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Вязание на заказ</a>
           </li>
-          <li class="navigation__item main-menu__item--search">
-            <a class="navigation__link" href="#">Поиск по сайту</a>
+        </ul>
+        <ul class="navigation__list user-list">
+          <li class="user-list__item user-list__item--search">
+            <a class="user-list__link" href="#">Поиск по сайту</a>
           </li>
-          <li class="navigation__item main-menu__item--basket">
-            <a class="navigation__link" href="#">Корзина: пока пуста</a>
+          <li class="user-list__item user-list__item--basket">
+            <a class="user-list__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main class="page__page-main page-main">
     <h1 class="visually-hidden">Магазин игрушек «Мишка»</h1>
 
     <section class="page-main__categories categories">
       <div class="categories__container container">
-        <header class="categories__header">
-          <h2 class="categories__heading">Милые штуки ручной работы для дома</h2>
-        </header>
+        <h2 class="categories__heading">Милые штуки ручной работы для дома</h2>
         <ul class="categories__list">
           <li class="categories__item categories__item--interior">
             <a class="categories__link" href="#">Предметы интерьера</a>
@@ -60,10 +60,8 @@
     <section class="page-main__popular-product popular-product">
       <div class="popular-product__container container">
         <header class="popular-product__header">
-          <!-- Сначала здесь поставил <h2 class="visually-hidden">Товар недели</h2>, но потом решил убрать, так как в тексте уже есть такое содержимое
-            и оставил "Вязаные корзинки" в h2 хотя немного сомневаюсь еще -->
-          <h2 class="popular-product__title title">Вязаные корзинки</h2>
-          <p class="popular-product__subtitle">Товар недели</p>
+          <h2 class="popular-product__title">Товар недели</h2>
+          <p class="popular-product__name title">Вязаные корзинки</p>
           <p class="popular-product__description">
             Экологически чистая пряжа,
             ручная работа. Доступны в шести расцветках и трёх размерах.
@@ -85,7 +83,7 @@
         </header>
         <img class="popular-product__image" src="img/products/baskets.jpg" alt="Три вязаных корзинки">
         <strong class="popular-product__price">Цена: 990 руб.</strong>
-        <button class="popular-product__button button" type="button">Заказать</button>
+        <a class="popular-product__button button" href="#">Заказать</a>
       </div>
     </section>
 
@@ -105,7 +103,7 @@
           <li class="about__item about__item--hand-made">
             <p class="about__text">Связано вручную с любовью и умилением</p>
           </li>
-          <li class="about__item about__item--protectionism">
+          <li class="about__item about__item--support">
             <p class="about__text">Поддержка отечественного производителя</p>
           </li>
           <li class="about__item about__item--gift">
@@ -126,17 +124,43 @@
               В отчаянии, я накупила аксессуаров и игрушек в Мишке,
               и мои фотографии сразу стали более стильными, а также набирают больше лайков!
             </p>
-            <div class="reviews__author-info">
-              <cite class="reviews__author-name">
-                Анастасия Красильникова
-                <span class="reviews__author-nickname">@misssssiskras</span>
-              </cite>
-            </div>
+            <cite class="reviews__author-name">
+              Анастасия Красильникова
+              <span class="reviews__author-nickname">@misssssiskras</span>
+            </cite>
+          </blockquote>
+
+          <blockquote class="reviews__item slider__item">
+            <p class="reviews__text">
+              Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстаcамочек. В отчаянии, я накупила аксессуаров
+              и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+              больше лайков!
+            </p>
+            <cite class="reviews__author-name">
+              Екатерина Красильникова
+              <span class="reviews__author-nickname">@misssssiskras2</span>
+            </cite>
+          </blockquote>
+
+          <blockquote class="reviews__item slider__item">
+            <p class="reviews__text">
+              Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстаcамочек. В отчаянии, я накупила аксессуаров
+              и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+              больше лайков!
+            </p>
+            <cite class="reviews__author-name">
+              Елена Красильникова
+              <span class="reviews__author-nickname">@misssssiskras3</span>
+            </cite>
           </blockquote>
         </div>
         <div class="reviews__arrows slider__arrows">
-          <button class="slider__arrow-prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-          <button class="slider__arrow-next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+          <button class="slider__arrow-prev" type="button">
+            <span class="visually-hidden">Предыдущий отзыв</span>
+          </button>
+          <button class="slider__arrow-next" type="button">
+            <span class="visually-hidden">Следующий отзыв</span>
+          </button>
         </div>
         <button class="reviews__button button" type="button">Написать</button>
       </div>
@@ -153,59 +177,47 @@
             адрес: <a class="contacts__link" href="https://goo.gl/maps/ZjrHePncgdSXjLdT8">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</a>
           </p>
         </address>
-        <!-- стили временные -->
         <div class="contacts__map" id="map" style="width: 100%; height: 457px"></div>
-        <button class="contacts__button button">Напишите нам</button>
+        <a class="contacts__button button" href="#">Напишите нам</a>
       </div>
     </section>
-
   </main>
-
   <footer class="page__page-footer page-footer">
     <div class="page-footer__container container">
-
-      <!-- Не знал как тут лучше сделать, доп оболочу social или на ul повесить класс social-list, но это показалось мне глупым, а так получается доп оболочка лишняя -->
-      <div class="page-footer__social social">
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <!-- временный вариат иконок -->
-              <span class="visually-hidden">Мы в инстаграме</span>
-              <img class="social__icon" src="img/icons/social__icon-instagram.svg" alt="instagram">
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <!-- временный вариат иконок -->
-              <span class="visually-hidden">Мы в фейсбуке</span>
-              <img class="social__icon" src="img/icons/social__icon-facebook.svg" alt="facebook">
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="#">
-              <!-- временный вариат иконок -->
-              <span class="visually-hidden">Мы в твитере</span>
-              <img class="social__icon" src="img/icons/social__icon-twitter.svg" alt="twitter">
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="#">
+            <span class="visually-hidden">Мы в инстаграме</span>
+            <img class="social__icon" src="img/icons/instagram.svg" alt="instagram">
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="#">
+            <span class="visually-hidden">Мы в фейсбуке</span>
+            <img class="social__icon" src="img/icons/facebook.svg" alt="facebook">
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="#">
+            <span class="visually-hidden">Мы в твитере</span>
+            <img class="social__icon" src="img/icons/twitter.svg" alt="twitter">
+          </a>
+        </li>
+      </ul>
 
       <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">Перейти на страницу интенсива</span>
-          <img class="copyright__icon" src="img/copyright__icon-htmlacademy.svg" alt="Логотип академии">
+          <p class="copyright__text">Разработано <span class="visually-hidden">в HTMLacademy</span></p>
+          <span class="visually-hidden">Перейти на страницу интенсива от HTMLacademy</span>
+          <img class="copyright__icon" src="img/icon-htmlacademy.svg" alt="Логотип академии">
         </a>
       </div>
 
     </div>
   </footer>
   <section class="page__modal-basket modal-basket">
-    <h2 class="visually-hidden">Выбор размера товара</h2>
+    <h2 class="visually-hidden">Добавить в корзину</h2>
     <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="modal-basket__text">Добавить в корзину</p>
 
       <fieldset class="modal-basket__field">
         <legend class="modal-basket__choice">Выберите размер:</legend>
@@ -218,9 +230,8 @@
         <label class="modal-basket__label" for="large"><span class="visually-hidden">Выбрать размер L "большой"</span>L</label>
 
       </fieldset>
-      <button class="modal-basket__button" type="submit"></button>
+      <button class="modal-basket__button" type="submit">Добавить</button>
     </form>
-    <div class="modal-basket__fade"></div>
   </section>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=f1bfa766-8bde-449e-9c51-36d3a2651f95&lang=ru_RU"></script>
