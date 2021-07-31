@@ -44,58 +44,56 @@
   </header>
   <main class="page__page-main page-main">
     <section class="page-main__catalog catalog">
-      <div class="catalog__container container">
-        <h1 class="catalog__title">Каталог товаров</h1>
-      </div>
+        <h1 class="catalog__title container">Каталог товаров</h1>
     </section>
     <section class="page-main__product product">
-      <div class="product__container container">
-        <ul class="product__list">
+        <ul class="product__list container">
           <li class="product__item">
-            <a class="product__link" href="#">
-            <header class="product__info">
+              <a class="product__link" href="#">
                 <h2 class="product__name">Зайчик-попрыгайчик</h2>
-                <!-- Стоит ли здесь использовать таблицу для характеристик?
-                  Я решил что не буду так как визуально они никак не отличаются.
-                  Но с другой стороны это вроде симантичнее будет. -->
-                <p class="product__characteristic">Рост 30 см, вес 200 г</p>
-                <p class="product__price">
-                  1 200 руб.
+              </a>
+              <p class="product__characteristic">Рост 30 см, вес 200 г</p>
+              <p class="product__price">
+                1 200 руб.
+                <button class="product__button-basket" type="button">
                   <img class="product__basket" src="img/icons/basket.svg" width="20" height="19" alt="">
-                </p>
-              </header>
-              <!-- Не знаю стоило ли использовать <figure></figure> -->
-              <img class="product__image" src="img/products/hare.jpg" width="260" height="195" alt="Вязанный зайчик">
-            </a>
+                </button>
+              </p>
+              <a class="product__link" href="#">
+                <img class="product__image" src="img/products/hare.jpg" width="260" height="195" alt="Вязанный зайчик">
+              </a>
           </li>
           <li class="product__item">
-            <a class="product__link" href="#">
-            <header class="product__info">
+              <a class="product__link" href="#">
                 <h2 class="product__name">Корзинка для белья</h2>
-                <p class="product__characteristic">Диаметр 15 см, высота 10 см</p>
-                <p class="product__price">
-                  690 руб.
+              </a>
+              <p class="product__characteristic">Диаметр 15 см, высота 10 см</p>
+              <p class="product__price">
+                690 руб.
+                <button class="product__button-basket" type="button">
                   <img class="product__basket" src="img/icons/basket.svg" width="20" height="19" alt="">
-                </p>
-              </header>
-              <img class="product__image" src="img/products/basket.jpg" width="260" height="195" alt="Вязанная корзинка">
-            </a>
+                </button>
+              </p>
+              <a class="product__link" href="#">
+                <img class="product__image" src="img/products/basket.jpg" width="260" height="195" alt="Вязанная корзинка">
+              </a>
           </li>
           <li class="product__item">
-            <a class="product__link" href="#">
-            <header class="product__info">
+              <a class="product__link" href="#">
                 <h2 class="product__name">Большая корзинка для игрушек</h2>
-                <p class="product__characteristic">Диаметр 30 см, высота 30 см</p>
-                <p class="product__price">
-                  1 500 руб.
+              </a>
+              <p class="product__characteristic">Диаметр 30 см, высота 30 см</p>
+              <p class="product__price">
+                1 500 руб.
+                <button class="product__button-basket" type="button">
                   <img class="product__basket" src="img/icons/basket.svg" width="20" height="19" alt="">
-                </p>
-              </header>
-              <img class="product__image" src="img/products/big-basket.jpg" width="260" height="195" alt="Большая вязанная корзинка">
-            </a>
+                </button>
+              </p>
+              <a class="product__link" href="#">
+                <img class="product__image" src="img/products/big-basket.jpg" width="260" height="195" alt="Большая вязанная корзинка">
+              </a>
           </li>
         </ul>
-      </div>
     </section>
 
     <section class="page-main__production production">
@@ -103,10 +101,10 @@
         <h2 class="production__title">Процесс производства</h2>
         <div class="production__video video">
           <img class="video__image" src="img/preview.jpg" width="260" height="150" alt="">
-          <button class="video__button video__button--pause"><span class="visually-hidden">Воспроизвести видео</span></button>
+          <button class="video__button"><span class="visually-hidden">Воспроизвести видео</span></button>
           <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         </div>
-        <div class="production__button">Сделать заказ</div>
+        <button class="production__button">Сделать заказ</button>
       </div>
     </section>
   </main>
