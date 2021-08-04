@@ -1,0 +1,52 @@
+.field-group {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  border: none;
+}
+
+.field-group__heading {
+  $line: calc(100% - 58px);
+
+  position: relative;
+
+  margin-bottom: 10px;
+  width: 100%;
+  padding-right: $line;
+
+  line-height: 16px;
+  font-weight: 700;
+  color: $emerald;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: $line;
+    height: 1px;
+
+    background-color: $emerald;
+  }
+}
+
+.field-group__type {
+  margin: 0;
+}
+
+.field-group__color {
+  margin: 0;
+}
+
+.field-group__info {
+  margin: 0;
+}
+
+.field-group__contacts {
+  margin: 0;
+}

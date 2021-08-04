@@ -1,0 +1,17 @@
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  padding-top: 4px;
+
+  list-style: none;
+}
+
+.contacts-list__item {
+  margin-bottom: 34px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

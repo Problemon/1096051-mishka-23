@@ -11,6 +11,8 @@
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <title>Магазин игрушек «Мишка»</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 
@@ -20,35 +22,38 @@
         <a class="navigation__link-logo logo" href="index.html">
           <img class="logo__icon" src="img/logo-mobile.svg" width="86" height="35" alt="">
         </a>
-        <button class="navigation__toggle">
+        <button class="navigation__button">
+          <span class="navigation__button-icon navigation__button-icon--close"></span>
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="navigation__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="navigation__list user-list">
-          <li class="user-list__item user-list__item--search">
-            <a class="user-list__link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="user-list__item user-list__item--basket">
-            <a class="user-list__link" href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
+        <div class="navigation__menu navigation__menu--hidden">
+          <ul class="navigation__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="navigation__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--search" href="#">Поиск по сайту</a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--basket" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
   <main class="page__main main">
-    <header class="main__header main-header">
+    <header class="main__header-form main-header">
       <h1 class="main-header__title container">Вязание на заказ</h1>
     </header>
     <section class="main__order order">
       <h2 class="visually-hidden">Форма заказа</h2>
-      <form class="order__form form" action="https://echo.htmlacademy.ru" method="GET">
+      <form class="order__container container form" action="https://echo.htmlacademy.ru" method="GET">
         <p class="form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
         <fieldset class="form__field-group field-group">
@@ -56,13 +61,13 @@
           <ul class="field-group__type type-list">
             <li class="type-list__item">
               <label class="type-list__radio radio">
-                <input class="radio__input" type="radio" name="type" value="interior" checked>
+                <input class="radio__input visually-hidden" type="radio" name="type" value="interior" checked>
                 <span class="radio__text">Аксессуар для интерьера</span>
               </label>
             </li>
             <li class="type-list__item">
               <label class="type-list__radio radio">
-                <input class="radio__input" type="radio" name="type" value="toy">
+                <input class="radio__input visually-hidden" type="radio" name="type" value="toy">
                 <span class="radio__text">Детская игрушка</span>
               </label>
             </li>
@@ -74,37 +79,37 @@
           <ul class="field-group__color color-list">
             <li class="color-list__item">
               <label class="color-list__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox" name="color" value="white" checked>
+                <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="white" checked>
                 <span class="checkbox__text">Белый</span>
               </label>
             </li>
             <li class="color-list__item">
               <label class="color-list__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox" name="color" value="gray" checked>
+                <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="gray" checked>
                 <span class="checkbox__text">Серый</span>
               </label>
             </li>
             <li class="color-list__item">
               <label class="color-list__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox" name="color" value="tiffani">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="tiffani">
                 <span class="checkbox__text">«Тиффани»</span>
               </label>
             </li>
             <li class="color-list__item">
               <label class="color-list__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox" name="color" value="black">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="black">
                 <span class="checkbox__text">Черный</span>
               </label>
             </li>
             <li class="color-list__item">
               <label class="color-list__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox" name="color" value="pink">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="pink">
                 <span class="checkbox__text">Розовый</span>
               </label>
             </li>
             <li class="color-list__item">
               <label class="color-list__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox" name="color" value="orange">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="orange">
                 <span class="checkbox__text">Оранжевый</span>
               </label>
             </li>
@@ -143,21 +148,19 @@
                 <input class="input-contact__input" name="phone" type="number" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
                 <span class="input-contact__label" aria-hidden="true">тел</span>
                 <span class="visually-hidden">Введите ваш номер телефона</span>
-                <img class="input-contact__icon" src="img/icons/phone.svg" width="25" height="24" alt="">
               </label>
             </li>
             <li class="contacts-list__item">
               <label class="contacts-list__box input-contact">
                 <input class="input-contact__input" name="email" type="email" placeholder="Ваш Email*">
-                <span class="input-contact__label" aria-hidden="true">E-mail</span>
+                <span class="input-contact__label input-contact__label--email" aria-hidden="true">E-mail</span>
                 <span class="visually-hidden">Введите ваш e-mail</span>
-                <img class="input-contact__icon" src="img/icons/mail.svg" width="32" height="21" alt="">
               </label>
             </li>
           </ul>
         </fieldset>
 
-        <p class="form__field-group field-group">
+        <p class="form__field-group form__field-group--textarea field-group">
           <label class="field-group__textarea textarea">
             <textarea class="textarea__field" placeholder="Опишите все ваши пожелания к заказу" name="wishes"></textarea>
             <span class="textarea__heading" aria-hidden="true">Доп</span>
@@ -167,7 +170,7 @@
 
         <p class="form__clue">*Поля обязательны для заполнения</p>
 
-        <button class="form__submit button" type="submit">Отправить заказ</button>
+        <button class="form__submit button button--smaller-text" type="submit">Отправить заказ</button>
       </form>
     </section>
   </main>

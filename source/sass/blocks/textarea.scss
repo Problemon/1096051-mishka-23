@@ -1,0 +1,51 @@
+.textarea {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 4px;
+}
+
+.textarea__field {
+  height: 142px;
+  padding: 17px;
+  border: 2px solid $black-l27;
+
+  line-height: 18px;
+  resize: none;
+
+  &::placeholder {
+    color: $black;
+    opacity: 0.3;
+  }
+}
+
+.textarea__heading {
+  $line: calc(100% - 58px);
+
+  position: relative;
+
+  margin-bottom: 22px;
+  width: 100%;
+  padding-right: $line;
+
+  line-height: 16px;
+  font-weight: 700;
+  color: $emerald;
+  text-transform: uppercase;
+
+  order: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: $line;
+    height: 1px;
+
+    background-color: $emerald;
+  }
+}

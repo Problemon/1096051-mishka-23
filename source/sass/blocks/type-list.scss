@@ -1,0 +1,17 @@
+.type-list {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  padding-top: 20px;
+
+  list-style: none;
+}
+
+.type-list__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

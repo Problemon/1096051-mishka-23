@@ -1,0 +1,17 @@
+.info-list {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  padding-top: 21px;
+
+  list-style: none;
+}
+
+.info-list__item {
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

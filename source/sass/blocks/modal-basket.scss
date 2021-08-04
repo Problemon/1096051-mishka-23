@@ -79,13 +79,18 @@
 }
 
 .modal-basket__button {
+  border: 2px solid $emerald;
+
+  text-align: center;
   font-size: 17px;
   line-height: 16px;
-  border-color: $emerald;
+  font-weight: 700;
+  text-transform: uppercase;
 
   color: $white;
   background-color: $emerald;
 
+  cursor: pointer;
   transition: color 0.2s, background-color 0.3s ease, border-color 0.3s ease;
 
   &:hover,

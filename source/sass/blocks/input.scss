@@ -1,0 +1,22 @@
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__field {
+  padding: 17px 0 14px;
+  border: none;
+  border-bottom: 2px solid $black;
+
+  &::placeholder {
+    color: $black;
+    opacity: 0.3;
+  }
+}
+
+.input__label {
+  line-height: 18px;
+  font-weight: 700;
+
+  order: -1;
+}
