@@ -1,0 +1,76 @@
+.popular-product {
+  padding: 31px 30px 36px;
+  border-image: url("../../img/zigzag.svg") 8 round;
+  border-bottom: 6px solid $white-l98;
+}
+
+.popular-product__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-product__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-product__title {
+  margin: 0;
+  margin-bottom: 17px;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $emerald;
+}
+
+.popular-product__name {
+  order: -1;
+  margin: 0;
+  margin-bottom: 3.5px;
+}
+
+.popular-product__description {
+  margin: 0;
+  margin-bottom: 14px;
+
+  font-size: 15px;
+}
+
+.popular-product__table {
+  margin-bottom: 35px;
+
+  text-align: left;
+  font-size: 15px;
+  line-height: 20px;
+
+  border-collapse: collapse;
+}
+
+.popular-product__row {
+  border-bottom: $white-l93 1px solid;
+}
+
+.popular-product__characteristic {
+  padding: 13px 0 6px;
+  font-weight: 400;
+}
+
+.popular-product__value {
+  padding-left: 17px;
+  padding-top: 9px;
+}
+
+.popular-product__image {
+  margin-bottom: 25px;
+}
+
+.popular-product__price {
+  margin-bottom: 24px;
+
+  align-self: center;
+  font-weight: 700;
+
+  color: $black-l27;
+}

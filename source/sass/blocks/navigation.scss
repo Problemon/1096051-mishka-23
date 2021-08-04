@@ -1,0 +1,65 @@
+.navigation {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  padding: 22px 0 21px;
+}
+
+.navigation__link-logo {
+  grid-column: 2 / 3;
+}
+
+.navigation__button {
+  position: relative;
+  width: 20px;
+  height: 14px;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navigation__button-icon {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: $darken;
+
+  &::after {
+    @include stick(calc(100% - 2px));
+  }
+
+  &::before {
+    @include stick(0);
+  }
+}
+
+.navigation__menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  top: 100%;
+  left: -30px;
+  width: calc(100% + 60px);
+
+  background-color: $white;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--vissible {
+    display: block;
+  }
+}
+
+.navigation__list {
+  margin: 0;
+}

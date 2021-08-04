@@ -1,0 +1,101 @@
+.modal-basket {
+  display: none;
+  background-color: $white-90;
+}
+
+.modal-basket__container {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 300px;
+  width: 100%;
+  max-width: 566px;
+  padding: 28px 30px 46px;
+  border: 1px solid $white-l78;
+
+  background-color: $white;
+  box-shadow: 0 5px 10px $modal-shadow;
+}
+
+.modal-basket__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 0 50px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal-basket__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-basket__field {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  margin-bottom: 31px;
+  padding: 0;
+  border: none;
+
+  text-align: center;
+}
+
+.modal-basket__choice {
+  margin-bottom: 22px;
+
+  font-size: 15px;
+  line-height: 30px;
+  color: $black-l27;
+}
+
+.modal-basket__size {
+  display: block;
+  padding: 12px 34px;
+  border: 2px solid $black-l27-10;
+
+  cursor: pointer;
+
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: $black;
+  }
+}
+
+.modal-basket__radio {
+  &:checked ~ .modal-basket__size {
+    border: 2px solid $emerald;
+  }
+
+  &:focus ~ .modal-basket__size {
+    outline: 2px solid $black;
+  }
+}
+
+.modal-basket__button {
+  font-size: 17px;
+  line-height: 16px;
+  border-color: $emerald;
+
+  color: $white;
+  background-color: $emerald;
+
+  transition: color 0.2s, background-color 0.3s ease, border-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $emerald;
+    background-color: $white;
+  }
+
+  &:active {
+    border-color: $emerald-30;
+    color: $emerald-30;
+  }
+}

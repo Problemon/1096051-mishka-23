@@ -11,6 +11,8 @@
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <title>Магазин игрушек «Мишка»</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 
@@ -20,25 +22,28 @@
         <a class="navigation__link-logo logo">
           <img class="logo__icon" src="img/logo-mobile.svg" width="86" height="35" alt="">
         </a>
-        <button class="navigation__toggle">
+        <button class="navigation__button">
+          <span class="navigation__button-icon navigation__button-icon--close"></span>
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="navigation__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="navigation__list user-list">
-          <li class="user-list__item user-list__item--search">
-            <a class="user-list__link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="user-list__item user-list__item--basket">
-            <a class="user-list__link" href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
+        <div class="navigation__menu navigation__menu--hidden">
+          <ul class="navigation__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="navigation__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--search" href="#">Поиск по сайту</a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--basket" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -49,11 +54,11 @@
       <div class="categories__container container">
         <h2 class="categories__heading">Милые штуки ручной работы для дома</h2>
         <ul class="categories__list">
-          <li class="categories__item categories__item--interior">
-            <a class="categories__link" href="#">Предметы интерьера</a>
+          <li class="categories__item">
+            <a class="categories__link categories__link--interior" href="#">Предметы интерьера</a>
           </li>
-          <li class="categories__item categories__item--toy">
-            <a class="categories__link" href="#">Детские игрушки</a>
+          <li class="categories__item">
+            <a class="categories__link categories__link--toy" href="#">Детские игрушки</a>
           </li>
         </ul>
       </div>
@@ -132,7 +137,7 @@
             </cite>
           </blockquote>
 
-          <blockquote class="reviews__item slider__item">
+          <!-- <blockquote class="reviews__item slider__item">
             <p class="reviews__text">
               Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстаcамочек. В отчаянии, я накупила аксессуаров
               и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
@@ -154,13 +159,13 @@
               Елена Красильникова
               <span class="reviews__author-nickname">@misssssiskras3</span>
             </cite>
-          </blockquote>
+          </blockquote> -->
         </div>
         <div class="reviews__arrows slider__arrows">
-          <button class="slider__arrow-prev" type="button">
+          <button class="slider__arrow slider__arrow--prev" type="button">
             <span class="visually-hidden">Предыдущий отзыв</span>
           </button>
-          <button class="slider__arrow-next" type="button">
+          <button class="slider__arrow slider__arrow--next" type="button">
             <span class="visually-hidden">Следующий отзыв</span>
           </button>
         </div>
@@ -179,7 +184,7 @@
             адрес: <a class="contacts__link" href="https://goo.gl/maps/ZjrHePncgdSXjLdT8">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</a>
           </p>
         </address>
-        <div class="contacts__map" id="map" style="width: 100%; height: 457px"></div>
+        <div class="contacts__map" id="map"></div>
         <a class="contacts__button button" href="#">Напишите нам</a>
       </div>
     </section>
@@ -217,22 +222,33 @@
     </div>
   </footer>
   <section class="page__modal-basket modal-basket">
-    <h2 class="visually-hidden">Добавить в корзину</h2>
-    <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="post">
+    <div class="modal-basket__container">
+      <h2 class="modal-basket__title title">Добавить в корзину</h2>
+      <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="post">
 
-      <fieldset class="modal-basket__field">
-        <legend class="modal-basket__choice">Выберите размер:</legend>
+        <fieldset class="modal-basket__field">
+          <legend class="modal-basket__choice">Выберите размер:</legend>
 
-        <input class="modal-basket__radio" type="radio" id="small" name="size" value="S">
-        <label class="modal-basket__label" for="small"><span class="visually-hidden">Выбрать размер S "маленький"</span>S</label>
-        <input class="modal-basket__radio" type="radio" id="medium" name="size" value="M">
-        <label class="modal-basket__label" for="medium"><span class="visually-hidden">Выбрать размер M "средний"</span>M</label>
-        <input class="modal-basket__radio" type="radio" id="large" name="size" value="L">
-        <label class="modal-basket__label" for="large"><span class="visually-hidden">Выбрать размер L "большой"</span>L</label>
+          <label class="modal-basket__label">
+            <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="S" checked>
+            <span class="visually-hidden">Выбрать размер S "маленький"</span>
+            <span class="modal-basket__size">S</span>
+          </label>
+          <label class="modal-basket__label">
+            <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="M">
+            <span class="visually-hidden">Выбрать размер M "средний"</span>
+            <span class="modal-basket__size">M</span>
+          </label>
+          <label class="modal-basket__label">
+            <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="L">
+            <span class="visually-hidden">Выбрать размер L "большой"</span>
+            <span class="modal-basket__size">L</span>
+          </label>
 
-      </fieldset>
-      <button class="modal-basket__button" type="submit">Добавить</button>
-    </form>
+        </fieldset>
+        <button class="modal-basket__button button" type="submit">Добавить</button>
+      </form>
+    </div>
   </section>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=f1bfa766-8bde-449e-9c51-36d3a2651f95&lang=ru_RU"></script>

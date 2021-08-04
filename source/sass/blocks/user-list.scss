@@ -1,0 +1,19 @@
+.user-list {
+  padding: 0;
+  list-style: none;
+}
+
+.user-list__link {
+  display: block;
+
+  width: 100%;
+  padding: 28.5px 10px 26.5px 76px;
+
+  font-weight: 700;
+  color: $black;
+
+  box-shadow:
+    inset 0 1px 0 $white-l93,
+    0 1px 0 $white-l93;
+  cursor: pointer;
+}
