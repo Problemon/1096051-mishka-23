@@ -5,6 +5,8 @@
 .production__container {
   display: flex;
   flex-direction: column;
+
+  max-width: 334px;
 }
 
 .production__title {
