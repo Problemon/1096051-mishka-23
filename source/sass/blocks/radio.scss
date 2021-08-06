@@ -1,3 +1,11 @@
+.radio__input {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+
+  opacity: 0;
+}
+
 .radio__text {
   position: relative;
   display: block;
@@ -41,27 +49,26 @@
   }
 }
 
-.radio__input {
-  &:checked + .radio__text {
-    &::after {
-      content: "";
-      position: absolute;
 
-      left: 20px;
-      top: 20px;
-      transform: translate(-50%, -50%);
+.radio__input:checked + .radio__text {
+  &::after {
+    content: "";
+    position: absolute;
 
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
+    left: 20px;
+    top: 20px;
+    transform: translate(-50%, -50%);
 
-      background-color: $emerald;
-    }
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    background-color: $emerald;
   }
+}
 
-  &:focus + .radio__text {
-    &::before {
-      outline: 2px solid $black;
-    }
+.radio__input:focus + .radio__text {
+  &::before {
+    outline: 2px solid $black;
   }
 }

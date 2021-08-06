@@ -1,8 +1,3 @@
-.video {
-  display: flex;
-  flex-direction: column;
-}
-
 .video__player {
   position: relative;
 }
@@ -53,9 +48,6 @@
 }
 
 .video__info {
-  display: flex;
-  flex-direction: column;
-
   padding: 33px 34px;
   border: 1px solid $white-l93;
   border-top: none;

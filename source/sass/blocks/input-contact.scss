@@ -1,8 +1,3 @@
-.input-contact {
-  display: flex;
-  flex-direction: column;
-}
-
 .input-contact__input {
   padding: 17px 0;
   border: none;
@@ -15,13 +10,10 @@
 }
 
 .input-contact__label {
-  $line: calc(100% - 58px);
-
   position: relative;
 
   margin-bottom: 2px;
   width: 100%;
-  padding-right: $line;
 
   line-height: 16px;
   font-weight: 700;
@@ -29,26 +21,4 @@
   text-transform: uppercase;
 
   order: -1;
-
-  &::after {
-    content: "";
-    position: absolute;
-
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: $line;
-    height: 1px;
-
-    background-color: $emerald;
-  }
-
-  &--email {
-    padding-right: calc(#{$line} - 20px);
-
-    &::after {
-      width: calc(#{$line} - 20px);
-    }
-  }
 }

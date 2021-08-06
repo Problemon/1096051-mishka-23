@@ -3,28 +3,18 @@
 }
 
 .product__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   padding: 0;
 
   list-style: none;
 }
 
 .product__item {
-  display: flex;
-  flex-direction: column;
-
   width: 100%;
   max-width: 334px;
   margin-bottom: 30px;
 }
 
 .product__info {
-  display: flex;
-  flex-direction: column;
-
   padding: 27px 28px;
   border: 1px solid $white-l93;
 }
@@ -51,10 +41,6 @@
 }
 
 .product__price {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
   margin: 0;
 
   font-size: 15px;
