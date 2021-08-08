@@ -1,7 +1,5 @@
 .reviews {
   padding: 0 30px 45px;
-  border-image: url("../../img/zigzag.svg") 8 round;
-  border-bottom: 6px solid transparent;
 }
 
 .reviews__title {
@@ -23,7 +21,7 @@
 
   font-size: 15px;
   line-height: 30px;
-  color: $black-l27;
+  color: lighten($black, 27);
 }
 
 .reviews__author-name {

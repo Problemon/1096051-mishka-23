@@ -5,8 +5,8 @@
   font-display: swap;
   src:
     local("Open Sans"),
-    url("../../fonts/opensans-regular.woff2"),
-    url("../../fonts/opensans-regular.woff");
+    url("../fonts/opensans-regular.woff2") format("woff2"),
+    url("../fonts/opensans-regular.woff") format("woff");
 }
 
 @font-face {
@@ -15,6 +15,6 @@
   font-style: normal;
   src:
     local("Open Sans Bold"),
-    url("../../fonts/opensans-bold.woff2"),
-    url("../../fonts/opensans-bold.woff");
+    url("../fonts/opensans-bold.woff2") format("woff2"),
+    url("../fonts/opensans-bold.woff") format("woff");
 }

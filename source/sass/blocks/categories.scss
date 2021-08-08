@@ -1,8 +1,10 @@
 .categories {
   padding: 0;
   padding-top: 75px;
-  background: url("../../../img/toys-in-house.jpg") 50% -15px no-repeat;
-  background-color: $white-l98;
+  background-image: url("../img/toys-in-house.jpg");
+  background-position: 50% -15px;
+  background-repeat: no-repeat;
+  background-color: darken($white, 2);
 }
 
 .categories__heading {
@@ -26,7 +28,6 @@
 .categories__link {
   display: block;
 
-  width: 100%;
   padding: 24px 120px 31px 30px;
 
   font-size: 19px;

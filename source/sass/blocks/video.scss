@@ -49,7 +49,7 @@
 
 .video__info {
   padding: 33px 34px;
-  border: 1px solid $white-l93;
+  border: 1px solid darken($white, 7);
   border-top: none;
 }
 
@@ -58,7 +58,7 @@
   margin-bottom: 41px;
 
   font-size: 13px;
-  color: $black-l27;
+  color: lighten($black, 27);
 }
 
 .video__submit {

@@ -1,20 +1,22 @@
 .modal-basket {
   display: none;
-  background-color: $white-90;
+  background-color: rgba($white, 0.9);
 }
 
 .modal-basket__container {
   position: absolute;
 
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 0;
+  bottom: 50%;
+  left: 0;
 
+  margin: auto;
   min-height: 300px;
   width: 100%;
   max-width: 566px;
   padding: 28px 30px 46px;
-  border: 1px solid $white-l78;
+  border: 1px solid darken($white, 22);
 
   background-color: $white;
   box-shadow: 0 5px 10px $modal-shadow;
@@ -43,13 +45,13 @@
 
   font-size: 15px;
   line-height: 30px;
-  color: $black-l27;
+  color: lighten($black, 27);
 }
 
 .modal-basket__size {
   display: block;
   padding: 12px 34px;
-  border: 2px solid $black-l27-10;
+  border: 2px solid lighten(rgba($black, 0.1), 27);
 
   cursor: pointer;
 
@@ -92,7 +94,7 @@
   }
 
   &:active {
-    border-color: $emerald-30;
-    color: $emerald-30;
+    border-color: rgba($emerald, 0.3);
+    color: rgba($emerald, 0.3);
   }
 }

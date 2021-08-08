@@ -8,7 +8,7 @@
   margin-bottom: 32px;
 
   font-size: 13px;
-  color: $black-l27;
+  color: lighten($black, 27);
 }
 
 .form__field-group {
@@ -27,5 +27,5 @@
   font-size: 14px;
   line-height: 16px;
 
-  color: $black-l27;
+  color: lighten($black, 27);
 }

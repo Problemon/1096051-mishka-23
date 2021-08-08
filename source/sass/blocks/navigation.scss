@@ -1,8 +1,5 @@
 .navigation {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
 
   padding: 22px 0 21px;
 }
@@ -10,18 +7,6 @@
 .navigation__link-logo {
   grid-column: 2 / 3;
   justify-self: center;
-}
-
-.navigation__button-icon {
-  position: relative;
-  width: 20px;
-  height: 14px;
-  margin-left: auto;
-  padding: 0;
-  border: none;
-
-  background-color: transparent;
-  cursor: pointer;
 }
 
 .navigation__menu {
@@ -37,7 +22,7 @@
     display: none;
   }
 
-  &--vissible {
+  &--visible {
     display: block;
   }
 }

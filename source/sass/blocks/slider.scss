@@ -7,7 +7,7 @@
   position: relative;
 
   height: 52px;
-  border: 1px solid $white-l93;
+  border: 1px solid darken($white, 7);
 
   background-color: transparent;
   cursor: pointer;
@@ -23,7 +23,8 @@
     width: 50px;
     height: 26px;
 
-    background: url("../img/icons/arrow.svg") no-repeat;
+    background-image: url("../img/icons/arrow.svg");
+    background-repeat: no-repeat;
     transition: opacity 0.2s;
   }
 

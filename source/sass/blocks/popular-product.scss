@@ -1,7 +1,5 @@
 .popular-product {
   padding: 31px 30px 36px;
-  border-image: url("../../img/zigzag.svg") 8 round;
-  border-bottom: 6px solid $white-l98;
 }
 
 .popular-product__title {
@@ -16,9 +14,8 @@
 }
 
 .popular-product__name {
-  order: -1;
   margin: 0;
-  margin-bottom: 3.5px;
+  margin-bottom: 3px;
 }
 
 .popular-product__description {
@@ -39,7 +36,7 @@
 }
 
 .popular-product__row {
-  border-bottom: $white-l93 1px solid;
+  border-bottom: darken($white, 7) 1px solid;
 }
 
 .popular-product__characteristic {
@@ -63,5 +60,5 @@
   align-self: center;
   font-weight: 700;
 
-  color: $black-l27;
+  color: lighten($black, 27);
 }

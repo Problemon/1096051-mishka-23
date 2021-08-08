@@ -4,7 +4,7 @@
 
 .textarea__field {
   padding: 15px 17px;
-  border: 2px solid $black-l27;
+  border: 2px solid lighten($black, 27);
 
   line-height: 18px;
   resize: none;
@@ -25,6 +25,4 @@
   font-weight: 700;
   color: $emerald;
   text-transform: uppercase;
-
-  order: -1;
 }
