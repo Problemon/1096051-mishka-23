@@ -4,13 +4,13 @@
 
 .textarea__field {
   padding: 15px 17px;
-  border: 2px solid lighten($black, 27);
+  border: 2px solid $color-black-270;
 
   line-height: 18px;
   resize: none;
 
   &::placeholder {
-    color: $black;
+    color: $color-black;
     opacity: 0.3;
   }
 }

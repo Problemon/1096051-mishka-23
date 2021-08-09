@@ -36,7 +36,7 @@
 }
 
 .popular-product__row {
-  border-bottom: darken($white, 7) 1px solid;
+  border-bottom: $color-white-70 1px solid;
 }
 
 .popular-product__characteristic {
@@ -60,5 +60,5 @@
   align-self: center;
   font-weight: 700;
 
-  color: lighten($black, 27);
+  color: $color-black-270;
 }

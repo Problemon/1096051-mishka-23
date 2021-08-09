@@ -1,13 +1,13 @@
 .button {
   padding: 16px 15px 13px;
-  border: 2px solid lighten($black, 27);
+  border: 2px solid $color-black-270;
 
   text-align: center;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  color: lighten($black, 27);
+  color: $color-black-270;
 
   background: none;
   cursor: pointer;
@@ -15,12 +15,12 @@
 
   &:hover,
   &:focus {
-    color: $white;
-    background-color: lighten($black, 27);
+    color: $color-white;
+    background-color: $color-black-270;
   }
 
   &:active {
-    color: rgba($white, 0.3);
+    color: rgba($color-white, 0.3);
   }
 
   &--small {

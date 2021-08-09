@@ -1,10 +1,10 @@
 .input__field {
   padding: 17px 0 14px;
   border: none;
-  border-bottom: 2px solid $black;
+  border-bottom: 2px solid $color-black;
 
   &::placeholder {
-    color: $black;
+    color: $color-black;
     opacity: 0.3;
   }
 }

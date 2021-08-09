@@ -4,7 +4,7 @@
   background-image: url("../img/toys-in-house.jpg");
   background-position: 50% -15px;
   background-repeat: no-repeat;
-  background-color: darken($white, 2);
+  background-color: $color-white-20;
 }
 
 .categories__heading {
@@ -32,7 +32,7 @@
 
   font-size: 19px;
   font-weight: 700;
-  color: $white;
+  color: $color-white;
 
   &--interior {
     background-color: $emerald;

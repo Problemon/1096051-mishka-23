@@ -16,7 +16,7 @@
 
   width: 100px;
   height: 77px;
-  border: 6px solid $white;
+  border: 6px solid $color-white;
   border-radius: 22px;
 
   background-color: $emerald;
@@ -31,7 +31,7 @@
     left: 50%;
     transform: translate(-40%, -50%);
 
-    border-left: 30px solid $white;
+    border-left: 30px solid $color-white;
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
   }
@@ -49,7 +49,7 @@
 
 .video__info {
   padding: 33px 34px;
-  border: 1px solid darken($white, 7);
+  border: 1px solid $color-white-70;
   border-top: none;
 }
 
@@ -58,7 +58,7 @@
   margin-bottom: 41px;
 
   font-size: 13px;
-  color: lighten($black, 27);
+  color: $color-black-270;
 }
 
 .video__submit {

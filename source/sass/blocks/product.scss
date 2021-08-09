@@ -14,7 +14,7 @@
 
 .product__info {
   padding: 27px 28px;
-  border: 1px solid darken($white, 7);
+  border: 1px solid $color-white-70;
 }
 
 .product__name {
@@ -30,12 +30,12 @@
   margin-top: 0;
   margin-bottom: 22px;
   padding-bottom: 17px;
-  border-bottom: 1px solid darken($white, 7);
+  border-bottom: 1px solid $color-white-70;
 
   font-size: 13px;
   line-height: 30px;
 
-  color: lighten($black, 27);
+  color: $color-black-270;
 }
 
 .product__price {
