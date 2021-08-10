@@ -1,0 +1,32 @@
+.navigation {
+  position: relative;
+
+  padding: 22px 0 21px;
+}
+
+.navigation__link-logo {
+  grid-column: 2 / 3;
+  justify-self: center;
+}
+
+.navigation__menu {
+  position: absolute;
+
+  top: 100%;
+  left: -30px;
+  width: calc(100% + 60px);
+
+  background-color: $color-white;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--visible {
+    display: block;
+  }
+}
+
+.navigation__list {
+  margin: 0;
+}

@@ -1,0 +1,41 @@
+.reviews {
+  padding: 0 30px 45px;
+}
+
+.reviews__title {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.reviews__list {
+  margin-bottom: 28px;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__text {
+  margin-top: 0;
+  margin-bottom: 33px;
+
+  font-size: 15px;
+  line-height: 30px;
+  color: $color-black-270;
+}
+
+.reviews__author-name {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.reviews__author-nickname {
+  display: block;
+  padding-top: 5px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.reviews__arrows {
+  margin-bottom: 38px;
+}

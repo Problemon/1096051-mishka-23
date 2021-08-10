@@ -1,0 +1,51 @@
+.slider__arrows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.slider__arrow {
+  position: relative;
+
+  height: 52px;
+  border: 1px solid $color-white-70;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50px;
+    height: 26px;
+
+    background-image: url("../img/icons/arrow.svg");
+    background-repeat: no-repeat;
+    transition: opacity 0.2s;
+  }
+
+  &--prev {
+    transform: rotate(0deg);
+  }
+
+  &--next {
+    transform: rotate(180deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}

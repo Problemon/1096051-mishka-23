@@ -1,0 +1,14 @@
+.type-list {
+  padding: 0;
+  padding-top: 20px;
+
+  list-style: none;
+}
+
+.type-list__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

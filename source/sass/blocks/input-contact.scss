@@ -1,0 +1,22 @@
+.input-contact__input {
+  padding: 17px 0;
+  border: none;
+  border-bottom: 2px solid $color-black;
+
+  &::placeholder {
+    color: $color-black;
+    opacity: 0.3;
+  }
+}
+
+.input-contact__label {
+  position: relative;
+
+  margin-bottom: 2px;
+  width: 100%;
+
+  line-height: 16px;
+  font-weight: 700;
+  color: $emerald;
+  text-transform: uppercase;
+}

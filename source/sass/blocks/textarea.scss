@@ -1,0 +1,28 @@
+.textarea {
+  padding-top: 4px;
+}
+
+.textarea__field {
+  padding: 15px 17px;
+  border: 2px solid $color-black-270;
+
+  line-height: 18px;
+  resize: none;
+
+  &::placeholder {
+    color: $color-black;
+    opacity: 0.3;
+  }
+}
+
+.textarea__heading {
+  position: relative;
+
+  margin-bottom: 22px;
+  width: 100%;
+
+  line-height: 16px;
+  font-weight: 700;
+  color: $emerald;
+  text-transform: uppercase;
+}

@@ -1,0 +1,20 @@
+.field-group {
+  padding: 0;
+  border: none;
+}
+
+.field-group__heading {
+  position: relative;
+
+  margin-bottom: 10px;
+  width: 100%;
+
+  line-height: 16px;
+  font-weight: 700;
+  color: $emerald;
+  text-transform: uppercase;
+}
+
+.field-group__list {
+  margin: 0;
+}

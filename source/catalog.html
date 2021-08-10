@@ -11,6 +11,8 @@
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <title>Магазин игрушек «Мишка»</title>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 
@@ -20,76 +22,84 @@
         <a class="navigation__link-logo logo" href="index.html">
           <img class="logo__icon" src="img/logo-mobile.svg" width="86" height="35" alt="">
         </a>
-        <button class="navigation__toggle">
+        <button class="navigation__button-icon navigation__button-icon--close">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="navigation__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="navigation__list user-list">
-          <li class="user-list__item user-list__item--search">
-            <a class="user-list__link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="user-list__item user-list__item--basket">
-            <a class="user-list__link" href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
+        <div class="navigation__menu navigation__menu--visible">
+          <ul class="navigation__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="navigation__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--search" href="#">Поиск по сайту</a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link user-list__link--basket" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
   <main class="page__main main">
-    <section class="main__catalog catalog">
-      <h1 class="catalog__title container">Каталог товаров</h1>
-    </section>
+    <header class="main__header main-header">
+      <h1 class="main-header__title container">Каталог товаров</h1>
+    </header>
     <section class="main__product product">
       <h2 class="visually-hidden">Список товаров</h2>
       <ul class="product__list container">
         <li class="product__item">
-          <a class="product__name-link" href="#">
-            <h3 class="product__name">Зайчик-попрыгайчик</h3>
-          </a>
-          <p class="product__characteristic">Рост 30 см, вес 200 г</p>
-          <p class="product__price">
-            1 200 руб.
-            <button class="product__button-basket" type="button">
-              <img class="product__basket" src="img/icons/basket.svg" width="20" height="19" alt="Положить в корзину">
-            </button>
-          </p>
+          <div class="product__info">
+            <a class="product__name-link" href="#">
+              <h3 class="product__name">Зайчик-попрыгайчик</h3>
+            </a>
+            <p class="product__characteristic">Рост 30 см, вес 200 г</p>
+            <p class="product__price">
+              1 200 руб.
+              <button class="product__button-basket" type="button">
+                <img class="product__basket" src="img/icons/basket.svg" width="20" height="19" alt="Положить в корзину">
+              </button>
+            </p>
+          </div>
           <a class="product__image-link" href="#">
             <img class="product__image" src="img/products/hare.jpg" width="260" height="195" alt="Вязанный зайчик">
           </a>
         </li>
         <li class="product__item">
-          <a class="product__name-link" href="#">
-            <h3 class="product__name">Корзинка для белья</h3>
-          </a>
-          <p class="product__characteristic">Диаметр 15 см, высота 10 см</p>
-          <p class="product__price">
-            690 руб.
-            <button class="product__button-basket" type="button">
-              <img class="product__basket" src="img/icons/basket.svg" width="20" height="19" alt="Положить в корзину">
-            </button>
-          </p>
+          <div class="product__info">
+            <a class="product__name-link" href="#">
+              <h3 class="product__name">Корзинка для белья</h3>
+            </a>
+            <p class="product__characteristic">Диаметр 15 см, высота 10 см</p>
+            <p class="product__price">
+              690 руб.
+              <button class="product__button-basket" type="button">
+                <img class="product__basket" src="img/icons/basket.svg" width="20" height="19" alt="Положить в корзину">
+              </button>
+            </p>
+          </div>
           <a class="product__image-link" href="#">
             <img class="product__image" src="img/products/basket.jpg" width="260" height="195" alt="Вязанная корзинка">
           </a>
         </li>
         <li class="product__item">
-          <a class="product__name-link" href="#">
-            <h3 class="product__name">Большая корзинка для игрушек</h3>
-          </a>
-          <p class="product__characteristic">Диаметр 30 см, высота 30 см</p>
-          <p class="product__price">
-            1 500 руб.
-            <button class="product__button-basket" type="button">
-              <img class="product__basket" src="img/icons/basket.svg" width="20" height="19" alt="Положить в корзину">
-            </button>
-          </p>
+          <div class="product__info">
+            <a class="product__name-link" href="#">
+              <h3 class="product__name">Большая корзинка для игрушек</h3>
+            </a>
+            <p class="product__characteristic">Диаметр 30 см, высота 30 см</p>
+            <p class="product__price">
+              1 500 руб.
+              <button class="product__button-basket" type="button">
+                <img class="product__basket" src="img/icons/basket.svg" width="20" height="19" alt="Положить в корзину">
+              </button>
+            </p>
+          </div>
           <a class="product__image-link" href="#">
             <img class="product__image" src="img/products/big-basket.jpg" width="260" height="195" alt="Большая вязанная корзинка">
           </a>
@@ -101,13 +111,17 @@
       <div class="production__container container">
         <h2 class="production__title">Процесс производства</h2>
         <div class="production__video video">
-          <img class="video__image" src="img/preview.jpg" width="260" height="150" alt="">
-          <button class="video__button" type="button">
-            <span class="visually-hidden">Воспроизвести видео</span>
-          </button>
-          <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <div class="video__player">
+            <img class="video__image" src="img/preview.jpg" width="260" height="150" alt="">
+            <button class="video__button" type="button">
+              <span class="visually-hidden">Воспроизвести видео</span>
+            </button>
+          </div>
+          <div class="video__info">
+            <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a class="video__submit button" href="form.html">Сделать заказ</a>
+          </div>
         </div>
-        <a class="production__button" href="form.html">Сделать заказ</a>
       </div>
     </section>
   </main>
@@ -144,22 +158,30 @@
     </div>
   </footer>
   <section class="page__modal-basket modal-basket">
-    <h2 class="visually-hidden">Добавить в корзину</h2>
-    <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="post">
+    <div class="modal-basket__container">
+      <h2 class="modal-basket__title title">Добавить в корзину</h2>
+      <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="post">
 
-      <fieldset class="modal-basket__field">
-        <legend class="modal-basket__choice">Выберите размер:</legend>
+        <fieldset class="modal-basket__field">
+          <legend class="modal-basket__choice">Выберите размер:</legend>
 
-        <input class="modal-basket__radio" type="radio" id="small" name="size" value="S">
-        <label class="modal-basket__label" for="small"><span class="visually-hidden">Выбрать размер S "маленький"</span>S</label>
-        <input class="modal-basket__radio" type="radio" id="medium" name="size" value="M">
-        <label class="modal-basket__label" for="medium"><span class="visually-hidden">Выбрать размер M "средний"</span>M</label>
-        <input class="modal-basket__radio" type="radio" id="large" name="size" value="L">
-        <label class="modal-basket__label" for="large"><span class="visually-hidden">Выбрать размер L "большой"</span>L</label>
+          <label class="modal-basket__label">
+            <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="S" checked>
+            <span class="modal-basket__size">S</span>
+          </label>
+          <label class="modal-basket__label">
+            <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="M">
+            <span class="modal-basket__size">M</span>
+          </label>
+          <label class="modal-basket__label">
+            <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="L">
+            <span class="modal-basket__size">L</span>
+          </label>
 
-      </fieldset>
-      <button class="modal-basket__button" type="submit">Добавить</button>
-    </form>
+        </fieldset>
+        <button class="modal-basket__button" type="submit">Добавить</button>
+      </form>
+    </div>
   </section>
 
 </body>

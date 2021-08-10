@@ -1,0 +1,44 @@
+.categories {
+  padding: 0;
+  padding-top: 75px;
+  background-image: url("../img/toys-in-house.jpg");
+  background-position: 50% -15px;
+  background-repeat: no-repeat;
+  background-color: $color-white-20;
+}
+
+.categories__heading {
+  margin: 0;
+  margin-bottom: 120px;
+  padding: 0 30px;
+
+  text-align: center;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.categories__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.categories__link {
+  display: block;
+
+  padding: 24px 120px 31px 30px;
+
+  font-size: 19px;
+  font-weight: 700;
+  color: $color-white;
+
+  &--interior {
+    background-color: $emerald;
+  }
+
+  &--toy {
+    background-color: $emerald-darken;
+  }
+}

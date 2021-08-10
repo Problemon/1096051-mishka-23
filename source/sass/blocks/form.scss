@@ -1,0 +1,31 @@
+.form {
+  padding-top: 17px;
+  padding-bottom: 55px;
+}
+
+.form__text {
+  margin-top: 0;
+  margin-bottom: 32px;
+
+  font-size: 13px;
+  color: $color-black-270;
+}
+
+.form__field-group {
+  margin: 0;
+  margin-bottom: 31px;
+
+  &--textarea {
+    margin-bottom: 17px;
+  }
+}
+
+.form__clue {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  color: $color-black-270;
+}

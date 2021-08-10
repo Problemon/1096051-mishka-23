@@ -1,0 +1,32 @@
+.button {
+  padding: 16px 15px 13px;
+  border: 2px solid $color-black-270;
+
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-black-270;
+
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-black-270;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
+
+  &--small {
+    padding-bottom: 16px;
+
+    font-size: 17px;
+    line-height: 16px;
+  }
+}

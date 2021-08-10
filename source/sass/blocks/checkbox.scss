@@ -1,0 +1,19 @@
+.checkbox__input {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+
+  opacity: 0;
+}
+
+.checkbox__text {
+  display: block;
+
+  min-height: 38px;
+  padding: 10px 0 0 59px;
+
+  line-height: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
