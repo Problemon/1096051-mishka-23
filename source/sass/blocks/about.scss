@@ -13,6 +13,13 @@
   list-style: none;
 }
 
+@media (min-width: $tablet-width) {
+  .about__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .about__item {
   padding-top: 55px;
   margin-bottom: 28px;

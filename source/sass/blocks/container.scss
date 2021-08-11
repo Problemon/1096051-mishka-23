@@ -2,3 +2,10 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (min-width: $tablet-width) {
+  .container {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}

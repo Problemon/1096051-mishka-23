@@ -1,12 +1,15 @@
-$color-white:    hsl(0, 0%, 100%);
-$color-white-20: hsl(0, 0%, 98%);
-$color-white-50: hsl(0, 0%, 95%);
-$color-white-70: hsl(0, 0%, 93%);
-$color-white-220:hsl(0, 0%, 78%);
-$color-black:    hsl(0, 0%, 0%);
-$color-black-270:hsl(0, 0%, 27%);
-$darken:         hsl(345, 6%, 13%);
-$emerald:        hsl(168, 54%, 60%);
-$emerald-darken: hsl(171, 48%, 55%);
+$color-white: hsl(0, 0%, 100%);
+$color-gray-980: hsl(0, 0%, 98%);
+$color-gray-950: hsl(0, 0%, 95%);
+$color-gray-930: hsl(0, 0%, 93%);
+$color-gray-780: hsl(0, 0%, 78%);
+$color-gray: hsl(0, 0%, 50%);
+$color-gray-270: hsl(0, 0%, 27%);
+$color-black: hsl(0, 0%, 0%);
+$color-emerald: hsl(168, 54%, 60%);
+$color-emerald-darken: hsl(171, 48%, 55%);
+$color-modal-shadow: hsla(180, 100%, 0%, 0.25);
 
-$modal-shadow:   hsla(180, 100%, 0%, 0.25);
+
+$tablet-width: 768px;
+$desktop-width: 1150px;
