@@ -1,11 +1,19 @@
 .site-list {
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .site-list {
-    display: flex;
+.site-list__item {
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -21,5 +29,15 @@
   box-shadow:
     inset 0 1px 0 $color-gray-930,
     0 1px 0 $color-gray-930;
-  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    box-shadow: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }

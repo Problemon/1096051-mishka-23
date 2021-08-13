@@ -31,14 +31,13 @@
   padding: 0;
 
   list-style: none;
-}
 
-@media (min-width: $tablet-width) {
-  .categories__list {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 
 .categories__link {
   display: block;

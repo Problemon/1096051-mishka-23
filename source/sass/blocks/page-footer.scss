@@ -5,16 +5,16 @@
 
 .page-footer__link-logo {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .page-footer__container {
+.page-footer__container {
+  @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .page-footer__link-logo {
-    display: block;
   }
 }
