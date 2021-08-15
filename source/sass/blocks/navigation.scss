@@ -1,17 +1,23 @@
 .navigation {
   position: relative;
   display: grid;
-  grid-template-columns: [menu-start logo-start] 1fr [logo-end] 1fr [menu-end];
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 
   min-height: 79px;
 
   @media (min-width: $tablet-width) {
-    grid-template-rows: [menu-start logo-start] 89px [logo-end] 1fr [menu-end];
+    grid-template-rows: 89px  1fr;
+    grid-template-areas:
+      "logo  user"
+      "site  del";
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: [menu-start] 1fr [logo-start] 1fr [logo-end] 1fr [menu-end];
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "site  logo  user"
+      "sale  .     del";
   }
 }
 
@@ -19,22 +25,16 @@
 .navigation__link-logo {
   @media (min-width: $tablet-width) {
     margin-right: auto;
-    grid-row: logo-start / logo-end;
-    grid-column: logo-start / logo-end;
-
-    z-index: 1;
+    grid-area: logo;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: center;
-    grid-column: logo-start / logo-end;
     margin-right: 0;
-
     order: 1;
   }
 }
-
 
 .navigation__button {
   @media (min-width: $tablet-width) {
@@ -45,46 +45,30 @@
 .navigation__menu {
   background-color: $color-white;
 
-  @media (max-width: $tablet-width) {
-    &--hidden {
-      display: none;
-    }
-
-    &--visible {
-      position: absolute;
-      display: block;
-
-      top: 100%;
-      left: -30px;
-      width: calc(100% + 60px);
-    }
+  &--hidden {
+    display: none;
   }
+
+  &--visible {
+    position: absolute;
+    display: block;
+
+    top: 100%;
+    left: -30px;
+    width: calc(100% + 60px);
+  }
+
 
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-rows: 89px [site-start] max-content [site-end];
-    grid-template-columns: 1fr [user-start] 1fr [user-end];
-
-
-    grid-row: menu-start / menu-end;
-    grid-column: menu-start / menu-end;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: [site-start] 1fr [site-end] 1fr [user-start] 1fr [user-end];
+    display: contents;
   }
 }
-
 
 .navigation__site-list {
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    grid-row: site-start / site-end;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-row: auto;
+    grid-area: site;
   }
 }
 
@@ -92,11 +76,7 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    grid-column: user-start / user-end;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: 3/4;
+    grid-area: user;
   }
 }
 
@@ -114,6 +94,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;
+    grid-area: sale;
   }
 }
 
@@ -133,6 +114,6 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    grid-column: -2/-1;
+    grid-area: del;
   }
 }

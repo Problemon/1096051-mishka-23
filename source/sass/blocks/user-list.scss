@@ -1,5 +1,6 @@
 .user-list {
   padding: 0;
+  background-color: $color-white;
   list-style: none;
 
   @media (min-width: $tablet-width) {
@@ -16,15 +17,10 @@
   font-weight: 700;
   color: $color-black;
 
-  box-shadow:
-    inset 0 1px 0 $color-gray-930,
-    0 1px 0 $color-gray-930;
-
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     height: 100%;
     padding: 0;
-    box-shadow: none;
   }
 }

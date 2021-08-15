@@ -32,15 +32,6 @@
 
 .reviews__item {
   margin: 0;
-
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 175px;
-    grid-template-areas:
-      "text text"
-      "author .";
-    column-gap: 20px;
-  }
 }
 
 .reviews__text {
@@ -50,19 +41,14 @@
   font-size: 15px;
   line-height: 30px;
   color: $color-gray-270;
-
-  @media (min-width: $tablet-width) {
-    grid-area: text;
-  }
 }
 
 .reviews__author-name {
+  display: block;
+  padding-right: 175px;
+
   font-weight: 700;
   font-style: normal;
-
-  @media (min-width: $tablet-width) {
-    grid-area: author;
-  }
 }
 
 .reviews__author-nickname {
