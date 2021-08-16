@@ -1,4 +1,20 @@
 .page-footer {
   padding: 0 30px;
-  background-color: $color-white-50;
+  background-color: $color-gray-950;
+}
+
+.page-footer__link-logo {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.page-footer__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

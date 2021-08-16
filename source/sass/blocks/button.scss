@@ -1,13 +1,13 @@
 .button {
   padding: 16px 15px 13px;
-  border: 2px solid $color-black-270;
+  border: 2px solid $color-gray-270;
 
   text-align: center;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  color: $color-black-270;
+  color: $color-gray-270;
 
   background: none;
   cursor: pointer;
@@ -16,7 +16,7 @@
   &:hover,
   &:focus {
     color: $color-white;
-    background-color: $color-black-270;
+    background-color: $color-gray-270;
   }
 
   &:active {

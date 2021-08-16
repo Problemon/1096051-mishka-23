@@ -1,21 +1,48 @@
 .navigation {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 
-  padding: 22px 0 21px;
+  min-height: 79px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: 89px  1fr;
+    grid-template-areas:
+      "logo  user"
+      "site  del";
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "site  logo  user"
+      "sale  .     del";
+  }
 }
 
+
 .navigation__link-logo {
-  grid-column: 2 / 3;
-  justify-self: center;
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+    grid-area: logo;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+    order: 1;
+  }
+}
+
+.navigation__button {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .navigation__menu {
-  position: absolute;
-
-  top: 100%;
-  left: -30px;
-  width: calc(100% + 60px);
-
   background-color: $color-white;
 
   &--hidden {
@@ -23,10 +50,70 @@
   }
 
   &--visible {
+    position: absolute;
     display: block;
+
+    top: 100%;
+    left: -30px;
+    width: calc(100% + 60px);
+  }
+
+
+  @media (min-width: $tablet-width) {
+    display: contents;
   }
 }
 
-.navigation__list {
+.navigation__site-list {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-area: site;
+  }
+}
+
+.navigation__user-list {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-area: user;
+  }
+}
+
+.navigation__sale-menu {
+  display: none;
+
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 15px;
+
+  list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    grid-area: sale;
+  }
+}
+
+.navigation__sale-item {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+.navigation__delivery {
+  display: none;
+
+  font-size: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    grid-area: del;
+  }
 }

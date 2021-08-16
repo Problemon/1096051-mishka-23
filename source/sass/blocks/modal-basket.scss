@@ -1,5 +1,5 @@
 .modal-basket {
-  display: block;
+  display: none;
   background-color: rgba($color-white, 0.9);
 }
 
@@ -16,10 +16,10 @@
   width: 100%;
   max-width: 566px;
   padding: 28px 30px 46px;
-  border: 1px solid $color-white-220;
+  border: 1px solid $color-gray-780;
 
   background-color: $color-white;
-  box-shadow: 0 5px 10px $modal-shadow;
+  box-shadow: 0 5px 10px $color-modal-shadow;
 }
 
 .modal-basket__title {
@@ -45,13 +45,13 @@
 
   font-size: 15px;
   line-height: 30px;
-  color: $color-black-270;
+  color: $color-gray-270;
 }
 
 .modal-basket__size {
   display: block;
   padding: 12px 34px;
-  border: 2px solid rgba($color-black-270, 0.1);
+  border: 2px solid rgba($color-gray-270, 0.1);
 
   cursor: pointer;
 
@@ -64,7 +64,7 @@
 
 .modal-basket__radio {
   &:checked ~ .modal-basket__size {
-    border: 2px solid $emerald;
+    border: 2px solid $color-emerald;
   }
 
   &:focus ~ .modal-basket__size {
@@ -73,7 +73,7 @@
 }
 
 .modal-basket__button {
-  border: 2px solid $emerald;
+  border: 2px solid $color-emerald;
 
   text-align: center;
   font-size: 17px;
@@ -82,19 +82,19 @@
   text-transform: uppercase;
 
   color: $color-white;
-  background-color: $emerald;
+  background-color: $color-emerald;
 
   cursor: pointer;
   transition: color 0.2s, background-color 0.3s ease, border-color 0.3s ease;
 
   &:hover,
   &:focus {
-    color: $emerald;
+    color: $color-emerald;
     background-color: $color-white;
   }
 
   &:active {
-    border-color: rgba($emerald, 0.3);
-    color: rgba($emerald, 0.3);
+    border-color: rgba($color-emerald, 0.3);
+    color: rgba($color-emerald, 0.3);
   }
 }
