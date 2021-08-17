@@ -1,3 +1,12 @@
+.input-contact {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+  }
+}
+
 .input-contact__input {
   padding: 17px 0;
   border: none;
@@ -19,4 +28,6 @@
   font-weight: 700;
   color: $color-emerald;
   text-transform: uppercase;
+
+  order: -1;
 }

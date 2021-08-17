@@ -1,18 +1,7 @@
 .production {
   padding: 0 30px;
-}
 
-.production__container {
-  max-width: 334px;
-}
-
-.production__title {
-  margin: 0;
-  padding: 21px 13px 26px 91px;
-  border: 1px solid $color-gray-930;
-  border-bottom: none;
-
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }

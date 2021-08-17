@@ -1,6 +1,11 @@
 .field-group {
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
 }
 
 .field-group__heading {

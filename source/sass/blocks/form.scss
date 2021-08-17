@@ -11,12 +11,20 @@
   color: $color-gray-270;
 }
 
-.form__field-group {
+.form__field-group,
+.form__field-contacts {
   margin: 0;
   margin-bottom: 31px;
 
   &--textarea {
     margin-bottom: 17px;
+  }
+}
+
+.form__footer {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -28,4 +36,8 @@
   line-height: 16px;
 
   color: $color-gray-270;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
 }
