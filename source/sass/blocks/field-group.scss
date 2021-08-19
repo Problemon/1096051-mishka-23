@@ -22,4 +22,8 @@
 
 .field-group__list {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/-1;
+  }
 }
