@@ -1,5 +1,41 @@
+.video {
+  @media (min-width: $tablet-width) {
+    display: grid;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "player  title"
+      "player  info";
+  }
+}
+
+.video__title {
+  margin: 0;
+  padding: 21px 13px 26px 91px;
+  border: 1px solid $color-gray-930;
+  border-bottom: none;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+
+  @media (min-width: $desktop-width) {
+    grid-area: title;
+  }
+}
+
 .video__player {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: player;
+  }
 }
 
 .video__image {
@@ -51,6 +87,10 @@
   padding: 33px 34px;
   border: 1px solid $color-gray-930;
   border-top: none;
+
+  @media (min-width: $desktop-width) {
+    grid-area: info;
+  }
 }
 
 .video__description {

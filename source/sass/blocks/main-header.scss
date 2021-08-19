@@ -1,6 +1,10 @@
 .main-header {
   padding: 0 30px;
   background-color: $color-gray-950;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .main-header__title {

@@ -1,3 +1,13 @@
+.input {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 .input__field {
   padding: 17px 0 14px;
   border: none;
@@ -7,9 +17,19 @@
     color: $color-black;
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
 }
 
 .input__label {
   line-height: 18px;
   font-weight: 700;
+
+  order: -1;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 24px;
+  }
 }

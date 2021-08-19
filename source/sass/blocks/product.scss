@@ -1,20 +1,39 @@
 .product {
   padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .product__list {
   padding: 0;
-
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+  }
 }
 
 .product__item {
+  display: grid;
   margin-bottom: 30px;
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto;
+  }
 }
 
 .product__info {
-  padding: 27px 28px;
   border: 1px solid $color-gray-930;
+
+  order: 1;
 }
 
 .product__name {
