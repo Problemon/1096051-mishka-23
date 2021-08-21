@@ -8,7 +8,7 @@
   justify-content: space-between;
 
   min-height: 490px;
-  padding-top: 75px;
+  padding-top: 111px;
 
   background-image: url("../img/toys-in-house.jpg");
   background-position: 50% -15px;
@@ -21,9 +21,23 @@
   padding: 0 30px;
 
   text-align: center;
+  font-weight: 700;
   font-size: 27px;
   line-height: 30px;
-  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 371px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 357px;
+    padding: 0 120px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .categories__list {
@@ -38,11 +52,13 @@
   }
 }
 
-
 .categories__link {
   display: block;
-
-  padding: 24px 120px 31px 30px;
+  height: 100%;
+  padding-top: 24px;
+  padding-right: 120px;
+  padding-left: 31px;
+  padding-bottom: 30px;
 
   font-size: 19px;
   font-weight: 700;
@@ -54,5 +70,18 @@
 
   &--toy {
     background-color: $color-emerald-darken;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 150px;
+    padding-top: 26px;
+    padding-left: 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 320px;
   }
 }

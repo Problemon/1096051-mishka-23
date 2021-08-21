@@ -1,20 +1,25 @@
 .navigation {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    ".     logo  button"
+    "menu  menu  menu";
   align-items: center;
 
   min-height: 79px;
 
   @media (min-width: $tablet-width) {
     grid-template-rows: 89px  1fr;
+    row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "logo  user"
       "site  del";
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 150px 1fr;
     grid-template-areas:
       "site  logo  user"
       "sale  .     del";
@@ -23,6 +28,12 @@
 
 
 .navigation__link-logo {
+  justify-self: center;
+  grid-area: logo;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
+
   @media (min-width: $tablet-width) {
     margin-right: auto;
     grid-area: logo;
@@ -37,16 +48,136 @@
 }
 
 .navigation__button {
+  position: relative;
+  justify-self: end;
+  grid-area: button;
+
+  height: 14px;
+  width: 20px;
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+  outline-offset: 10px;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 40px;
+    height: 40px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--nojs {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.navigation__button-stick {
+  display: block;
+  position: relative;
+
+  height: 2px;
+  width: 100%;
+
+  background-color: $color-menu-button;
+  transition: background-color 0.3s ease;
+
+  &::after,
+  &::before {
+    transition: transform 0.4s ease;
+  }
+
+  &--opened {
+    background-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      top: 0;
+      height: 2px;
+      width: 100%;
+      transform: rotate(405deg);
+
+      background-color: $color-menu-button;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      top: 0;
+      height: 2px;
+      width: 100%;
+      transform: rotate(-405deg);
+
+      background-color: $color-menu-button;
+    }
+  }
+
+  &--closed {
+    &::after {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      bottom: calc(100% + 4px);
+      height: 2px;
+      width: 100%;
+      background-color: $color-menu-button;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      top: calc(100% + 4px);
+      height: 2px;
+      width: 100%;
+      background-color: $color-menu-button;
+    }
+  }
+}
+
 .navigation__menu {
   background-color: $color-white;
+  transition: transform 0.3s ease-in-out, opacity 0.3s, visibility 0.3s;
+
+  &--nojs {
+    grid-area: menu;
+
+    .site-list__link,
+    .user-list__link {
+      padding-left: 46px;
+    }
+  }
 
   &--hidden {
-    display: none;
+    position: absolute;
+    visibility: hidden;
+
+    top: 100%;
+    left: -30px;
+    width: calc(100% + 60px);
+    transform: translateX(-100%);
+
+    opacity: 0;
+
+    @media (min-width: $tablet-width) {
+      visibility: visible;
+    }
   }
 
   &--visible {
@@ -56,11 +187,15 @@
     top: 100%;
     left: -30px;
     width: calc(100% + 60px);
+    transform: translateX(0);
+
+    opacity: 1;
   }
 
 
   @media (min-width: $tablet-width) {
     display: contents;
+    opacity: 1;
   }
 }
 
@@ -99,7 +234,7 @@
 }
 
 .navigation__sale-item {
-  margin-right: 20px;
+  margin-right: 62px;
 
   &:last-child {
     margin-right: 0;
@@ -110,7 +245,9 @@
 .navigation__delivery {
   display: none;
 
+  margin: 0;
   font-size: 15px;
+  text-align: right;
 
   @media (min-width: $tablet-width) {
     display: block;

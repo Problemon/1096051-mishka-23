@@ -1,6 +1,7 @@
 .page-header {
   padding: 0 30px;
   background-color: $color-white;
+  background-image: linear-gradient(to bottom, $color-white calc(100% - 44px), $color-gray-980 calc(100% - 44px));
 
   @media (min-width: $tablet-width) {
     padding: 0;

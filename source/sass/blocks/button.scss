@@ -29,4 +29,15 @@
     font-size: 17px;
     line-height: 16px;
   }
+
+  &--review {
+    @media (min-width: $tablet-width) {
+      display: block;
+      width: 230px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }
