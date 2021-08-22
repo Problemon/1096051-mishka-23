@@ -2,10 +2,10 @@
   padding: 0;
 
   list-style: none;
-  background-color: $color-white;
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: $desktop-width) {
@@ -29,12 +29,13 @@
 
     border-right: 1px solid rgba($color-black, 0.1);
 
-    &:first-child {
+    &:nth-child(odd) {
       padding-left: 0;
     }
 
-    &:last-child {
+    &:nth-child(even) {
       border-right: none;
+      padding-right: 0;
     }
   }
 }
@@ -49,11 +50,15 @@
   padding-left: 76px;
 
   font-weight: 700;
-  font-size: 15px;
   color: $color-black;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    padding-top: 10px;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+
+    font-size: 15px;
   }
 
   @media (min-width: $desktop-width) {

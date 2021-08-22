@@ -124,9 +124,11 @@
 }
 
 .contacts__button {
+  display: block;
   margin: 0 30px;
 
   @media (min-width: $tablet-width) {
+    width: 230px;
     margin: 0 auto;
   }
 

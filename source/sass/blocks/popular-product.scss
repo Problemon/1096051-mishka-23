@@ -18,17 +18,17 @@
   display: grid;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 3.5fr 4fr;
+    grid-template-columns: 1fr 50%;
     grid-template-areas:
       "header  header"
       "info    img"
       "price   img"
       "button  img";
-    column-gap: 42px;
+    column-gap: 58px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 133px 2.7fr 5fr;
+    grid-template-columns: 118px 1fr 50%;
     grid-auto-rows: max-content;
     grid-template-areas:
       "header  header  header-img"
