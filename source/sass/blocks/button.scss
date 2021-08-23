@@ -29,4 +29,8 @@
     font-size: 17px;
     line-height: 16px;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }

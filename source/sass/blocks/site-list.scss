@@ -1,19 +1,41 @@
 .site-list {
   padding: 0;
+
   list-style: none;
-  background-color: $color-white;
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
   }
 }
 
 .site-list__item {
   @media (min-width: $tablet-width) {
-    margin-right: 20px;
+    margin-right: 36px;
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    padding-right: 36px;
+    padding-left: 36px;
+
+    border-right: 1px solid rgba($color-black, 0.1);
+
+    &:nth-child(odd) {
+      padding-left: 0;
+    }
+
+    &:nth-child(even) {
+      border-right: none;
+      padding-right: 0;
     }
   }
 }
@@ -22,18 +44,28 @@
   display: block;
 
   width: 100%;
-  padding: 28px 10px 26px 76px;
+  padding-top: 30px;
+  padding-right: 10px;
+  padding-bottom: 26px;
+  padding-left: 76px;
 
   font-weight: 700;
   color: $color-black;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    padding-top: 10px;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+
+    font-size: 15px;
   }
 
   @media (min-width: $desktop-width) {
     height: 100%;
     display: flex;
     align-items: center;
+
+    font-size: 17px;
   }
 }

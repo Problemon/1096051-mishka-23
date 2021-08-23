@@ -1,6 +1,13 @@
 .page-footer {
   padding: 0 30px;
   background-color: $color-gray-950;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+    padding-right: 0;
+    padding-bottom: 58px;
+    padding-left: 0;
+  }
 }
 
 .page-footer__link-logo {
@@ -8,6 +15,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    padding-left: 4px;
   }
 }
 

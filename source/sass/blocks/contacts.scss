@@ -1,11 +1,13 @@
-.contacts {
-  padding: 38px 0;
-}
-
 .contacts__container {
+  display: contents;
+
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title      map"
+      "contacts   map"
+      "button     map";
   }
 }
 
@@ -13,6 +15,25 @@
   margin-top: 0;
   margin-bottom: 28px;
   padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 50px;
+    margin-bottom: 49px;
+    margin-left: 50px;
+    padding-top: 24px;
+    padding-left: 0;
+    padding-right: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    margin-bottom: 14px;
+    margin-left: 0;
+    padding-top: 79px;
+    padding-left: 174px;
+
+    grid-area: title;
+  }
 }
 
 .contacts__address {
@@ -25,15 +46,52 @@
   color: $color-gray-270;
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin-right: 50px;
+    margin-bottom: 48px;
+    margin-left: 50px;
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 174px;
+
+    grid-area: contacts;
   }
 }
 
 
 .contacts__email {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+
   padding-right: 15px;
   margin-top: 0;
   margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__link {
+  margin-left: 32px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 243px;
+    margin-left: 24px;
+  }
 }
 
 .contacts__link--email {
@@ -41,6 +99,10 @@
 }
 
 .contacts__location {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+
   padding-right: 15px;
   margin: 0;
 }
@@ -50,13 +112,31 @@
   height: 457px;
   margin-bottom: 39px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
+
+
   @media (min-width: $desktop-width) {
-    grid-area: 1/2/4/3;
+    grid-area: map;
     margin-bottom: 0;
   }
 }
 
-
 .contacts__button {
+  display: block;
   margin: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: button;
+    align-self: end;
+
+    margin-left: 174px;
+    margin-right: 0;
+  }
 }

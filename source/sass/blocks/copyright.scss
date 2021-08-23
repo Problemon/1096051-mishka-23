@@ -1,9 +1,28 @@
 .copyright {
-  padding: 10px 39px 22px;
+  padding-top: 10px;
+  padding-left: 39px;
+  padding-right: 39px;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__text {
+  margin: 0;
+
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 30px;
+  }
 }

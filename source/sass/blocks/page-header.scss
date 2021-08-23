@@ -4,5 +4,20 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    background-image:
+      linear-gradient(to bottom,
+      $color-white 89px,
+      $color-gray-930 89px,
+      $color-gray-930 90px,
+      $color-gray-980 90px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image:
+      linear-gradient(to bottom,
+      $color-white calc(100% - 44px),
+      $color-gray-930 calc(100% - 44px),
+      $color-gray-930 calc(100% - 43px),
+      $color-gray-980 calc(100% - 43px));
   }
 }

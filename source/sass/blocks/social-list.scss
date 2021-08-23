@@ -1,7 +1,31 @@
 .social-list {
-  padding: 25px 59px 28px 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  padding-top: 25px;
+  padding-right: 59px;
+  padding-bottom: 28px;
+  padding-left: 59px;
   margin: 0;
   border-bottom: 1px solid darken($color-white, 10);
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 20px;
+    border: none;
+  }
+}
+
+.social-list__item {
+  margin-right: 41px;
+
+  &:last-child() {
+    margin-right: 0;
+  }
 }

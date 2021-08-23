@@ -1,10 +1,21 @@
 .about {
-  padding: 30px 30px 29px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .about__title {
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 31px;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
+    padding-right: 200px;
+  }
 }
 
 .about__list {
@@ -19,22 +30,74 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+    row-gap: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
+    padding-right: 200px;
   }
 }
 
 
 .about__item {
-  padding-top: 55px;
+  padding-top: 53px;
 
-  @media (max-width: $tablet-width) {
-    order: 1;
+  &:nth-child(odd) {
+    order: -1;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 67px;
+
+    &:nth-child(odd) {
+      order: 0;
+    }
   }
 }
 
+.about__item--ecology {
+  background-image: url("../img/icons/flower.svg");
+  background-repeat: no-repeat;
+  background-position-x: 8px;
+}
+
+.about__item--hand-made {
+  background-image: url("../img/icons/clew.svg");
+  background-repeat: no-repeat;
+  background-position-x: 3px;
+}
+
+.about__item--price {
+  background-image: url("../img/icons/bill.svg");
+  background-repeat: no-repeat;
+}
+
+.about__item--support {
+  background-image: url("../img/icons/rocket.svg");
+  background-repeat: no-repeat;
+}
+
+.about__item--beautiful {
+  background-image: url("../img/icons/heart.svg");
+  background-repeat: no-repeat;
+  background-position-x: 7px;
+}
+
+.about__item--gift {
+  background-image: url("../img/icons/gift.svg");
+  background-repeat: no-repeat;
+  background-position-x: 3px;
+}
 
 .about__text {
   margin: 0;
 
   line-height: 20px;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }

@@ -5,10 +5,16 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 100px;
   }
 }
 
 .user-list__link {
+  position: relative;
   display: block;
 
   width: 100%;
@@ -17,10 +23,81 @@
   font-weight: 700;
   color: $color-black;
 
+  &:hover,
+  &:focus {
+    .user-list__search-path,
+    .user-list__basket-path {
+      fill: $color-emerald;
+    }
+  }
+
+  &:active {
+    .user-list__search-path,
+    .user-list__basket-path {
+      fill: rgba($color-emerald, 0.3);
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     height: 100%;
     padding: 0;
+  }
+}
+
+.user-list__item:last-child {
+  flex-grow: 1;
+}
+
+.user-list__link--search {
+  @media (min-width: $tablet-width) {
+    width: 82px;
+    border-left: 1px solid rgba($color-black, 0.1);
+    border-right: 1px solid rgba($color-black, 0.1);
+  }
+}
+
+.user-list__search-icon,
+.user-list__basket-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+.user-list__search-path,
+.user-list__basket-path {
+  fill: rgba($color-black, 0.2);
+
+  transition: fill 0.1s;
+}
+
+.user-list__search-icon {
+  @media (min-width: $tablet-width) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.user-list__search-text {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+}
+
+.user-list__link--basket {
+  @media (min-width: $tablet-width) {
+    padding-left: 53px;
+    justify-content: flex-end;
+    flex-shrink: 1;
   }
 }
