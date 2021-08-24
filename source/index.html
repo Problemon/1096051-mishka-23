@@ -110,7 +110,7 @@
         </div>
         <img class="popular-product__image" src="img/products/baskets.jpg" width="260" height="315" alt="Три вязаных корзинки">
         <strong class="popular-product__price">Цена: 990 руб.</strong>
-        <a class="popular-product__button button" href="#">Заказать</a>
+        <a class="popular-product__button button-order button" href="modal.html">Заказать</a>
       </div>
     </section>
 
@@ -244,26 +244,33 @@
 
     </div>
   </footer>
-  <section class="page__modal-basket modal-basket">
+  <section class="page__modal-basket modal-basket modal-basket--hidden">
     <div class="modal-basket__container">
       <h2 class="modal-basket__title title">Добавить в корзину</h2>
       <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="post">
 
         <fieldset class="modal-basket__field">
           <legend class="modal-basket__choice">Выберите размер:</legend>
-
-          <label class="modal-basket__label">
-            <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="S" checked>
-            <span class="modal-basket__size">S</span>
-          </label>
-          <label class="modal-basket__label">
-            <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="M">
-            <span class="modal-basket__size">M</span>
-          </label>
-          <label class="modal-basket__label">
-            <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="L">
-            <span class="modal-basket__size">L</span>
-          </label>
+          <ul class="modal-basket__list">
+            <li class="modal-basket__item">
+              <label class="modal-basket__label">
+                <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="S" checked>
+                <span class="modal-basket__size">S</span>
+              </label>
+            </li>
+            <li class="modal-basket__item">
+              <label class="modal-basket__label">
+                <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="M">
+                <span class="modal-basket__size">M</span>
+              </label>
+            </li>
+            <li class="modal-basket__item">
+              <label class="modal-basket__label">
+                <input class="modal-basket__radio visually-hidden" type="radio" name="size" value="L">
+                <span class="modal-basket__size">L</span>
+              </label>
+            </li>
+          </ul>
 
         </fieldset>
         <button class="modal-basket__button" type="submit">Добавить</button>
@@ -274,6 +281,7 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=f1bfa766-8bde-449e-9c51-36d3a2651f95&lang=ru_RU"></script>
   <script src="js/map.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>

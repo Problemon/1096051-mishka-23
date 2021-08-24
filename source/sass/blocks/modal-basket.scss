@@ -1,6 +1,16 @@
+$modal-width: 566px;
+
 .modal-basket {
-  display: none;
   background-color: rgba($color-white, 0.9);
+
+  &--visible {
+    display: block;
+    z-index: 10;
+  }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .modal-basket__container {
@@ -12,23 +22,45 @@
   left: 0;
 
   margin: auto;
-  height: 300px;
+  height: max-content;
   width: 100%;
-  max-width: 566px;
-  padding: 28px 30px 46px;
+  max-width: $modal-width;
+  padding-top: 28px;
+  padding-right: 25px;
+  padding-bottom: 46px;
+  padding-left: 25px;
   border: 1px solid $color-gray-780;
 
   background-color: $color-white;
   box-shadow: 0 5px 10px $color-modal-shadow;
+
+  @media (min-width: $modal-width) {
+    padding-right: 105px;
+    padding-left: 105px;
+  }
 }
 
 .modal-basket__title {
   margin-top: 0;
   margin-bottom: 15px;
-  padding: 0 50px;
+  padding-right: 50px;
+  padding-left: 50px;
 
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $modal-width) {
+    padding: 0;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+
+.modal-basket__form {
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-basket__field {
@@ -48,9 +80,27 @@
   color: $color-gray-270;
 }
 
+.modal-basket__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.modal-basket__item {
+  margin-right: 3px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+  flex-grow: 1;
+}
+
 .modal-basket__size {
   display: block;
-  padding: 12px 34px;
+
+  min-width: 82px;
+  padding: 12px 0;
   border: 2px solid rgba($color-gray-270, 0.1);
 
   cursor: pointer;
@@ -73,6 +123,10 @@
 }
 
 .modal-basket__button {
+  margin-right: 3px;
+  margin-left: 3px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   border: 2px solid $color-emerald;
 
   text-align: center;

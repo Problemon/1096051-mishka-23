@@ -6,9 +6,9 @@
 
   width: 100%;
   padding-top: 25px;
-  padding-right: 59px;
-  padding-bottom: 28px;
-  padding-left: 59px;
+  padding-right: 30px;
+  padding-bottom: 18px;
+  padding-left: 30px;
   margin: 0;
   border-bottom: 1px solid darken($color-white, 10);
 
@@ -23,9 +23,8 @@
 }
 
 .social-list__item {
-  margin-right: 41px;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
