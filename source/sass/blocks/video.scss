@@ -1,10 +1,20 @@
 .video {
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba($color-black, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba($color-black, 0.1);
+  }
+
   @media (min-width: $tablet-width) {
     display: grid;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 65% 1fr;
     grid-template-areas:
       "player  title"
       "player  info";
@@ -13,7 +23,10 @@
 
 .video__title {
   margin: 0;
-  padding: 21px 13px 26px 91px;
+  padding-top: 21px;
+  padding-right: 13px;
+  padding-bottom: 26px;
+  padding-left: 91px;
   border: 1px solid $color-gray-930;
   border-bottom: none;
 
@@ -21,8 +34,29 @@
   line-height: 24px;
   font-weight: 700;
 
+  background-image: url("../img/icons/camera.svg");
+  background-repeat: no-repeat;
+  background-position: 34px 21px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 41px;
+    padding-bottom: 21px;
+    padding-left: 106px;
+
+    font-size: 20px;
+
+    background-position: 42px 41px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-area: title;
+
+    padding-top: 96px;
+    padding-left: 79px;
+    padding-right: 100px;
+    padding-bottom: 18px;
+
+    background-position: 79px 47px;
   }
 }
 
@@ -41,6 +75,11 @@
 .video__image {
   width: 100%;
   height: auto;
+
+
+  @media (min-width: $tablet-width) {
+    height: 455px;
+  }
 }
 
 .video__button {
@@ -84,21 +123,47 @@
 }
 
 .video__info {
-  padding: 33px 34px;
+  padding-top: 36px;
+  padding-right: 33px;
+  padding-bottom: 33px;
+  padding-left: 33px;
   border: 1px solid $color-gray-930;
   border-top: none;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 4px;
+    padding-right: 41px;
+    padding-bottom: 47px;
+    padding-left: 41px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-area: info;
+
+    padding-top: 10px;
+    padding-right: 56px;
+    padding-bottom: 59px;
+    padding-left: 79px;
   }
 }
 
 .video__description {
   margin-top: 0;
-  margin-bottom: 41px;
+  margin-bottom: 20px;
 
   font-size: 13px;
   color: $color-gray-270;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .video__submit {

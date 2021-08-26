@@ -11,7 +11,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-rows: minmax(89px, max-content)  1fr;
-    row-gap: 20px;
+    row-gap: 9px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "logo  user"
@@ -20,6 +20,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 150px 1fr;
+    row-gap: 19px;
     grid-template-areas:
       "site  logo  user"
       "sale  .     del";

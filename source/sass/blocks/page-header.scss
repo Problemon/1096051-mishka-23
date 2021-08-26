@@ -9,15 +9,35 @@
       $color-white 89px,
       $color-gray-930 89px,
       $color-gray-930 90px,
-      $color-gray-980 90px);
+      $color-gray-950 90px);
   }
 
   @media (min-width: $desktop-width) {
     background-image:
       linear-gradient(to top,
-      $color-gray-980 43px,
+      $color-gray-950 44px,
       $color-gray-930 44px,
       $color-gray-930 43px,
       $color-white 44px);
+  }
+
+  &--index {
+    @media (min-width: $tablet-width) {
+      background-image:
+        linear-gradient(to bottom,
+        $color-white 89px,
+        $color-gray-930 89px,
+        $color-gray-930 90px,
+        $color-gray-980 90px);
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image:
+        linear-gradient(to top,
+        $color-gray-980 44px,
+        $color-gray-930 44px,
+        $color-gray-930 43px,
+        $color-white 44px);
+    }
   }
 }

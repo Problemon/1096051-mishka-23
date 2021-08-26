@@ -1,20 +1,41 @@
 .input-contact {
+  position: relative;
   display: grid;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
+    grid-template-columns: 25% 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 115px 1fr;
   }
 }
 
 .input-contact__input {
-  padding: 17px 0;
+  padding-top: 17px;
+  padding-bottom: 17px;
   border: none;
   border-bottom: 2px solid $color-black;
+
+  background-color: transparent;
+  transition: border-color 0.2s;
 
   &::placeholder {
     color: $color-black;
     opacity: 0.3;
+  }
+
+  &:hover {
+    border-color: $color-emerald;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 14px;
+    padding-bottom: 15px;
+    padding-right: 16px;
+    padding-left: 16px;
+
+    font-size: 19px;
   }
 }
 
@@ -30,4 +51,54 @@
   text-transform: uppercase;
 
   order: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    height: 1px;
+    width: calc(100% - 60px);
+
+    background-color: $color-emerald;
+  }
+
+  &--email {
+    &::after {
+      width: calc(100% - 70px);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.input-contact__input-icon {
+  position: absolute;
+  right: 5px;
+  bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    right: 26px;
+  }
+}
+
+.input-contact__input-path {
+  fill: rgba($color-black, 0.2);
+
+  transition: fill 0.2s;
+}
+
+.input-contact__input:hover ~ .input-contact__input-icon .input-contact__input-path,
+.input-contact__input:focus ~ .input-contact__input-icon .input-contact__input-path,
+.input-contact__input:active ~ .input-contact__input-icon .input-contact__input-path {
+  fill: $color-emerald;
 }

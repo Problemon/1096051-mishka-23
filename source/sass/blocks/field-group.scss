@@ -3,14 +3,35 @@
   border: none;
 
   @media (min-width: $tablet-width) {
+    &--color {
+      background-color: $color-gray-950;
+    }
+  }
+}
+
+.field-group__container {
+  @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 25% 1fr;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 115px 1fr;
+
+    padding-left: 112px;
+    padding-right: 173px;
+
+    &--small {
+      padding-right: 225px;
+    }
   }
 }
 
 .field-group__heading {
   position: relative;
-  float: left;
 
   margin-bottom: 10px;
   width: 100%;
@@ -19,6 +40,30 @@
   font-weight: 700;
   color: $color-emerald;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    height: 1px;
+    width: calc(100% - 60px);
+
+    background-color: $color-emerald;
+  }
+
+  @media (min-width: $tablet-width) {
+    float: left;
+    padding-top: 18px;
+    margin-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .field-group__list {
