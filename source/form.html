@@ -74,9 +74,12 @@
       <form class="order__form form" action="https://echo.htmlacademy.ru" method="GET">
         <p class="form__text container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-        <fieldset class="form__field-group field-group">
-          <div class="field-group__container container">
-            <legend class="field-group__heading">Тип</legend>
+        <div class="form__field-group field-group">
+          <fieldset class="field-group__container container">
+            <legend class="field-group__heading">
+              <span class="field-group__heading-name">Тип</span>
+              <span class="field-group__heading-line"></span>
+            </legend>
             <ul class="field-group__list type-list">
               <li class="type-list__item">
                 <label class="type-list__radio radio">
@@ -91,12 +94,15 @@
                 </label>
               </li>
             </ul>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
 
-        <fieldset class="form__field-group field-group field-group--color">
-          <div class="field-group__container container">
-            <legend class="field-group__heading">Цвет</legend>
+        <div class="form__field-group field-group field-group--color">
+          <fieldset class="field-group__container container">
+            <legend class="field-group__heading">
+              <span class="field-group__heading-name">Цвет</span>
+              <span class="field-group__heading-line"></span>
+            </legend>
             <ul class="field-group__list color-list">
               <li class="color-list__item">
                 <label class="color-list__checkbox checkbox">
@@ -135,12 +141,15 @@
                 </label>
               </li>
             </ul>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
 
-        <fieldset class="form__field-group field-group">
-          <div class="field-group__container field-group__container--small container">
-            <legend class="field-group__heading">ФИО</legend>
+        <div class="form__field-group field-group">
+          <fieldset class="field-group__container field-group__container--small container">
+            <legend class="field-group__heading">
+              <span class="field-group__heading-name">ФИО</span>
+              <span class="field-group__heading-line"></span>
+            </legend>
             <ul class="field-group__list info-list">
               <li class="info-list__item">
                 <label class="info-list__box input">
@@ -161,17 +170,20 @@
                 </label>
               </li>
             </ul>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
 
-        <fieldset class="form__field-contacts field-contacts">
-          <div class="field-contacts__container container">
+        <div class="form__field-contacts field-contacts">
+          <fieldset class="field-contacts__container container">
             <legend class="visually-hidden">Контакты</legend>
             <ul class="field-contacts__list contacts-list">
               <li class="contacts-list__item">
                 <label class="contacts-list__box  input-contact">
                   <input class="input-contact__input" name="phone" type="number" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-                  <span class="input-contact__label" aria-hidden="true">тел</span>
+                  <span class="input-contact__label">
+                    <span class="input-contact__label-name" aria-hidden="true">тел</span>
+                    <span class="input-contact__label-line"></span>
+                  </span>
                   <span class="visually-hidden">телефон</span>
                   <svg class="input-contact__input-icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="input-contact__input-path" d="M17.4395 24C17.0363 24 16.7339 24 16.3306 24C11.3911 23.4074 7.7621 21.1358 5.14113 18.2717C2.52016 15.4075 0.403226 11.7532 0 6.7162C0 6.22237 0 5.82731 0 5.33349C0.100806 4.44461 0.504032 3.85202 1.10887 3.25943C1.71371 2.56808 2.72177 1.77796 3.62903 1.6792C4.33468 1.6792 5.44355 2.17302 5.84677 2.76561C6.25 3.25943 6.45161 4.34584 6.65323 5.13596C6.85484 6.02484 7.25806 7.11125 7.15726 7.90137C6.95565 9.08655 5.34274 9.58037 4.93952 10.4693C6.55242 14.1235 9.07258 16.889 12.5 18.6667C13.3065 18.1729 14.1129 16.7902 15.3226 16.7902C15.7258 16.7902 16.3306 16.9877 16.7339 17.0865C17.2379 17.1852 17.6411 17.3828 18.0444 17.5803C18.75 17.8766 20.0605 18.1729 20.4637 18.7655C20.8669 19.3581 21.1694 20.3457 21.0685 20.9383C20.7661 22.2222 18.6492 23.6049 17.4395 24Z" fill="none"/>
@@ -184,21 +196,27 @@
               <li class="contacts-list__item">
                 <label class="contacts-list__box input-contact">
                   <input class="input-contact__input" name="email" type="email" placeholder="Ваш Email*">
-                  <span class="input-contact__label input-contact__label--email">E-mail</span>
+                  <span class="input-contact__label">
+                    <span class="input-contact__label-name">E-mail</span>
+                    <span class="input-contact__label-line"></span>
+                  </span>
                   <svg class="input-contact__input-icon" width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="input-contact__input-path" d="M28 0H4C1.8 0 0 1.8 0 4V17C0 19.2 1.8 21 4 21H28C30.2 21 32 19.2 32 17V4C32 1.8 30.2 0 28 0ZM2 5.3L9 10.6L2 15.9V5.3ZM30 17C30 18.1 29.1 19 28 19H4C2.9 19 2 18.1 2 17L9.8 11.1L14.2 14.4C14.7 14.8 15.4 15 16 15C16.6 15 17.3 14.8 17.8 14.4L22.2 11.1L30 17ZM30 15.8L23 10.5L30 5.2V15.8ZM17.2 13.6C16.8 13.9 16.4 14 16 14C15.6 14 15.1 13.9 14.8 13.6L10.7 10.5L9.9 9.9L2 4C2 2.9 2.9 2 4 2H28C29.1 2 30 2.9 30 4L17.2 13.6Z" fill="none"/>
                   </svg>
                 </label>
               </li>
             </ul>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
 
         <div class="form__field-contacts form__field-contacts--textarea field-contacts field-contacts--textarea ">
           <div class="field-contacts__container container">
             <label class="field-contacts__textarea textarea">
               <textarea class="textarea__field" rows="6" placeholder="Опишите все ваши пожелания к заказу" name="wishes"></textarea>
-              <span class="textarea__heading" aria-hidden="true">Доп</span>
+              <span class="textarea__heading">
+                <span class="textarea__heading-name" aria-hidden="true">Доп</span>
+                <span class="textarea__heading-line"></span>
+              </span>
               <span class="visually-hidden">Опишите все ваши пожелания к заказу</span>
             </label>
           </div>

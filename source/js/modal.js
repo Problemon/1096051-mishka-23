@@ -1,6 +1,6 @@
 const modalBasket = document.querySelector(".modal-basket");
 const buttonOrder = document.querySelectorAll(".button-order");
-const buttonsSize = document.querySelectorAll(".modal-basket__radio");
+const buttonsSize = document.querySelectorAll(".size__radio");
 const buttonAdd   = document.querySelector(".modal-basket__button");
 
 let visible = "modal-basket--visible";

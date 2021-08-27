@@ -1,23 +1,29 @@
 .video {
-  transition: box-shadow 0.3s ease;
-
-  &:hover {
-    box-shadow: 0 6px 10px rgba($color-black, 0.1);
-  }
-
-  &:active {
-    box-shadow: 0 3px 5px rgba($color-black, 0.1);
-  }
-
-  @media (min-width: $tablet-width) {
-    display: grid;
-  }
+  display: grid;
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 65% 1fr;
     grid-template-areas:
       "player  title"
       "player  info";
+  }
+}
+
+.video__contents {
+  @media (max-width: $tablet-width) {
+    display: contents;
+  }
+
+  @media (min-width: $desktop-width) {
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 6px rgba($color-black, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 3px rgba($color-black, 0.1);
+    }
   }
 }
 
@@ -129,6 +135,8 @@
   padding-left: 33px;
   border: 1px solid $color-gray-930;
   border-top: none;
+
+  order: 1;
 
   @media (min-width: $tablet-width) {
     padding-top: 4px;

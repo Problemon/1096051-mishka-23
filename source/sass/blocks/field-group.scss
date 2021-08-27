@@ -1,7 +1,4 @@
 .field-group {
-  padding: 0;
-  border: none;
-
   @media (min-width: $tablet-width) {
     &--color {
       background-color: $color-gray-950;
@@ -10,6 +7,14 @@
 }
 
 .field-group__container {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 25% 1fr;
@@ -19,19 +24,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 115px 1fr;
-
-    padding-left: 112px;
-    padding-right: 173px;
+    grid-template-columns: 174px 1fr;
 
     &--small {
-      padding-right: 225px;
+      grid-template-columns: 1fr 4fr 1fr;
     }
   }
 }
 
 .field-group__heading {
-  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
   margin-bottom: 10px;
   width: 100%;
@@ -41,35 +45,36 @@
   color: $color-emerald;
   text-transform: uppercase;
 
-  &::after {
-    content: "";
-    position: absolute;
-
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-
-    height: 1px;
-    width: calc(100% - 60px);
-
-    background-color: $color-emerald;
-  }
-
   @media (min-width: $tablet-width) {
     float: left;
     padding-top: 18px;
     margin-bottom: 0;
+  }
 
-    &::after {
-      display: none;
-    }
+  @media (min-width: $desktop-width) {
+    padding-left: 62px;
+  }
+}
+
+.field-group__heading-name {
+  max-width: 200px;
+  padding-right: 25px;
+  word-break: break-all;
+}
+
+.field-group__heading-line {
+  display: block;
+  flex-grow: 1;
+
+  height: 1px;
+
+  background-color: $color-emerald;
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
 .field-group__list {
   margin: 0;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 2/-1;
-  }
 }

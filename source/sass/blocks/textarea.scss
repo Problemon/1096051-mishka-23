@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 115px 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
 
     padding-top: 0;
   }
@@ -46,7 +46,9 @@
 }
 
 .textarea__heading {
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
   margin-bottom: 22px;
   width: 100%;
@@ -60,5 +62,28 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 62px;
+  }
+}
+
+.textarea__heading-name {
+  max-width: 200px;
+  padding-right: 25px;
+  word-break: break-all;
+}
+
+.textarea__heading-line {
+  display: block;
+  flex-grow: 1;
+
+  height: 1px;
+
+  background-color: $color-emerald;
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

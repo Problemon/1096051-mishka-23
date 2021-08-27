@@ -96,32 +96,6 @@ $modal-width: 566px;
   flex-grow: 1;
 }
 
-.modal-basket__size {
-  display: block;
-
-  min-width: 82px;
-  padding: 12px 0;
-  border: 2px solid rgba($color-gray-270, 0.1);
-
-  cursor: pointer;
-
-  transition: border-color 0.3s ease;
-
-  &:hover {
-    border-color: $color-black;
-  }
-}
-
-.modal-basket__radio {
-  &:checked ~ .modal-basket__size {
-    border: 2px solid $color-emerald;
-  }
-
-  &:focus ~ .modal-basket__size {
-    outline: 2px solid $color-black;
-  }
-}
-
 .modal-basket__button {
   margin-right: 3px;
   margin-left: 3px;

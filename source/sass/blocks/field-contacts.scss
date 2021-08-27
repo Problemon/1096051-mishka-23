@@ -15,9 +15,12 @@
 }
 
 .field-contacts__container {
-  @media (min-width: $desktop-width) {
-    padding-left: 112px;
-    padding-right: 225px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
   }
 }
 
