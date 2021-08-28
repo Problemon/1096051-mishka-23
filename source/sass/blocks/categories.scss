@@ -1,5 +1,29 @@
 .categories {
+  position: relative;
   background-color: $color-gray-980;
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+
+      height: 24px;
+      width: 100%;
+
+      background-image: url("../img/icons/zigzag-cut.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      bottom: -17px;
+      height: 34px;
+    }
+  }
 }
 
 .categories__container {

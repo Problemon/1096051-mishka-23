@@ -81,19 +81,6 @@
   }
 }
 
-.user-list__search-text {
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0);
-  }
-}
-
 .user-list__link--basket {
   @media (min-width: $tablet-width) {
     padding-left: 53px;

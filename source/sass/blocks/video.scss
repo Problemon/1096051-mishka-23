@@ -10,22 +10,25 @@
 }
 
 .video__contents {
+  transition: box-shadow 0.3s ease;
+
   @media (max-width: $tablet-width) {
     display: contents;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    transition: box-shadow 0.3s ease;
-
-    &:hover {
-      box-shadow: 0 6px 6px rgba($color-black, 0.1);
-    }
-
-    &:active {
-      box-shadow: 0 3px 3px rgba($color-black, 0.1);
-    }
+.video:hover .video__contents {
+  @media (min-width: $tablet-width) {
+    box-shadow: 0 6px 10px rgba($color-black, 0.1);
   }
 }
+
+.video:active .video__contents {
+  @media (min-width: $tablet-width) {
+    box-shadow: 0 3px 5px rgba($color-black, 0.1);
+  }
+}
+
 
 .video__title {
   margin: 0;

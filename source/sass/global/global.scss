@@ -37,4 +37,13 @@ img {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+
+  &--mobile {
+    @media (max-width: $tablet-width) {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+    }
+  }
 }

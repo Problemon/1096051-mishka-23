@@ -1,9 +1,28 @@
 .main-header {
-  padding: 0 30px;
+  position: relative;
   background-color: $color-gray-950;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+
+      height: 24px;
+      width: 100%;
+
+      background-image: url("../img/icons/zigzag-cut.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      bottom: -17px;
+      height: 34px;
+    }
   }
 }
 

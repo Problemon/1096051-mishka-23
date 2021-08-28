@@ -1,39 +1,43 @@
-.reviews {
-  padding-bottom: 51px;
-  padding-right: 30px;
-  padding-left: 30px;
-
-  @media (min-width: $tablet-width) {
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 85px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 97px;
-  }
-}
-
 .reviews__container {
   display: grid;
+  padding-bottom: 51px;
+
+  background-image: url("../img/icons/zigzag.svg");
+  background-position: 0 100%;
+  background-repeat: repeat-x;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 175px;
     row-gap: 40px;
 
     padding-top: 77px;
-    padding-bottom: 47px;
+    padding-bottom: 132px;
 
-    background-image: url("../img/rug.png");
-    background-repeat: no-repeat;
+    background-image:
+      url("../img/rug.png"),
+      url("../img/icons/zigzag.svg");
+    background-repeat:
+      no-repeat,
+      repeat-x;
+    background-position:
+      0 0,
+      0 100%;
+    background-size:
+      auto auto,
+      auto 17px;
   }
 
   @media (min-width: $desktop-width) {
     row-gap: 35px;
     padding-top: 84px;
-    padding-bottom: 90px;
+    padding-bottom: 187px;
 
-    background-position-x: 50px;
+    background-position:
+      50px 0,
+      0 100%;
+    background-size:
+      auto auto,
+      80% 23px;
   }
 }
 
