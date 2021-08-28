@@ -59,15 +59,11 @@
 }
 
 .product__item:hover .product__info {
-  @media (min-width: $tablet-width) {
-    box-shadow: 0 6px 10px rgba($color-black, 0.1);
-  }
+  box-shadow: 0 6px 10px rgba($color-black, 0.1);
 }
 
 .product__item:active .product__info {
-  @media (min-width: $tablet-width) {
-    box-shadow: 0 3px 5px rgba($color-black, 0.1);
-  }
+  box-shadow: 0 3px 5px rgba($color-black, 0.1);
 }
 
 
