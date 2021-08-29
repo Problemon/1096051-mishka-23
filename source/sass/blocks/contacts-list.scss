@@ -3,6 +3,10 @@
   padding-top: 4px;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .contacts-list__item {
@@ -10,5 +14,9 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
   }
 }

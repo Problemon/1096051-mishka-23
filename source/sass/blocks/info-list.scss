@@ -3,6 +3,10 @@
   padding-top: 21px;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .info-list__item {

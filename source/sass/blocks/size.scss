@@ -1,0 +1,25 @@
+.size__text {
+  display: block;
+
+  min-width: 82px;
+  padding: 12px 0;
+  border: 2px solid rgba($color-gray-270, 0.1);
+
+  cursor: pointer;
+
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: $color-black;
+  }
+}
+
+.size__radio {
+  &:checked ~ .size__text {
+    border: 2px solid $color-emerald;
+  }
+
+  &:focus ~ .size__text {
+    outline: 2px solid $color-black;
+  }
+}

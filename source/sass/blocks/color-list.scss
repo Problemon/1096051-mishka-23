@@ -7,10 +7,16 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 22px;
+    row-gap: 23px;
+
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 37px;
+    padding-right: 123px;
   }
 }
 
@@ -19,5 +25,9 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
   }
 }

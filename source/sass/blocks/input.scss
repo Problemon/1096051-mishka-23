@@ -13,13 +13,23 @@
   border: none;
   border-bottom: 2px solid $color-black;
 
+  transition: border-color 0.2s;
+
   &::placeholder {
     color: $color-black;
     opacity: 0.3;
   }
 
+  &:hover {
+    border-color: $color-emerald;
+  }
+
   @media (min-width: $tablet-width) {
     flex-grow: 1;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-size: 19px;
   }
 }
 
@@ -30,6 +40,7 @@
   order: -1;
 
   @media (min-width: $tablet-width) {
+    font-size: 19px;
     margin-right: 24px;
   }
 }

@@ -1,6 +1,23 @@
 .field-contacts {
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-color: $color-gray-950;
+
+    &--textarea {
+      background-color: transparent;
+    }
+  }
+}
+
+.field-contacts__container {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
 }
 
 .field-contacts__list {

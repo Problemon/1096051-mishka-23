@@ -4,25 +4,52 @@
   padding-top: 4px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 25% 1fr;
+
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 4fr 1fr;
+
+    padding-top: 0;
   }
 }
 
 .textarea__field {
-  padding: 15px 17px;
+  padding-top: 15px;
+  padding-right: 17px;
+  padding-bottom: 15px;
+  padding-left: 17px;
   border: 2px solid $color-gray-270;
 
   line-height: 18px;
   resize: none;
 
+  transition: border-color 0.2s;
+
   &::placeholder {
     color: $color-black;
     opacity: 0.3;
   }
+
+  &:hover,
+  &:focus {
+    border-color: $color-emerald;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 15px;
+
+    font-size: 19px;
+  }
 }
 
 .textarea__heading {
-  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 25px;
 
   margin-bottom: 22px;
   width: 100%;
@@ -33,4 +60,27 @@
   text-transform: uppercase;
 
   order: -1;
+
+  &::after {
+    position: static;
+    content: "";
+    display: block;
+    flex-grow: 1;
+
+    height: 1px;
+
+    background-color: $color-emerald;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 62px;
+  }
 }
