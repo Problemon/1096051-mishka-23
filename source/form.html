@@ -20,7 +20,11 @@
     <div class="page-header__container container container--mobile">
       <nav class="page-header__navigation navigation">
         <a class="navigation__link-logo logo" href="index.html">
-          <img class="logo__icon" src="img/logo-mobile.svg" width="86" height="35" alt="">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__icon" src="img/logo-mobile.svg" width="86" height="35" alt="">
+          </picture>
         </a>
         <button class="navigation__button navigation__button--nojs">
           <span class="visually-hidden">Открыть меню</span>
