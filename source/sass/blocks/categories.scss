@@ -39,16 +39,14 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  @media (min-resolution: 144dpi),
-    (min-resolution: 1.5dppx) {
+  @media (min-resolution: 2dppx) {
     background-image: url("../img/toys-in-house@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/toys-in-house-tablet@1x.jpg");
 
-    @media (min-resolution: 144dpi),
-      (min-resolution: 1.5dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../img/toys-in-house-tablet@2x.jpg");
     }
   }
@@ -101,13 +99,26 @@
   font-size: 19px;
   font-weight: 700;
   color: $color-white;
+  background-repeat: no-repeat;
 
   &--interior {
     background-color: $color-emerald;
+    background-image: url("../img/icons/interior.svg");
+    background-position: calc(100% - 36px) 50%;
   }
 
   &--toy {
     background-color: $color-emerald-darken;
+    background-image: url("../img/icons/toy.svg");
+    background-position: calc(100% - 27px) 50%;
+
+    @media (min-width: $tablet-width) {
+      background-position: calc(100% - 33px) 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: calc(100% - 35px) 50%;
+    }
   }
 
   @media (min-width: $tablet-width) {
