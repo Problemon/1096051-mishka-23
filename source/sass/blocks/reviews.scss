@@ -14,7 +14,7 @@
     padding-bottom: 132px;
 
     background-image:
-      url("../img/rug.png"),
+      url("../img/rug@1x.jpg"),
       url("../img/icons/zigzag.svg");
     background-repeat:
       no-repeat,
@@ -23,8 +23,15 @@
       0 0,
       0 100%;
     background-size:
-      auto auto,
+      350px 457px,
       auto 17px;
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image:
+        url("../img/rug@2x.jpg"),
+        url("../img/icons/zigzag.svg");
+    }
   }
 
   @media (min-width: $desktop-width) {

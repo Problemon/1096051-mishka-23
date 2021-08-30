@@ -34,10 +34,24 @@
   min-height: 490px;
   padding-top: 111px;
 
-  background-image: url("../img/toys-in-house.jpg");
+  background-image: url("../img/toys-in-house@1x.jpg");
   background-position: 50% -15px;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url("../img/toys-in-house@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/toys-in-house-tablet@1x.jpg");
+
+    @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+      background-image: url("../img/toys-in-house-tablet@2x.jpg");
+    }
+  }
 }
 
 .categories__heading {

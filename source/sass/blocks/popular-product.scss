@@ -159,6 +159,10 @@
   }
 }
 
+.popular-product__picture {
+  display: contents;
+}
+
 .popular-product__image {
   align-self: center;
   margin-bottom: 25px;

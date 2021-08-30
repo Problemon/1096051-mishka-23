@@ -1,9 +1,12 @@
 .page-header {
   padding: 0 30px;
+  border-bottom: 1px solid $color-gray-930;
+
   background-color: $color-white;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border-bottom: none;
     background-image:
       linear-gradient(to bottom,
       $color-white 89px,
@@ -15,10 +18,10 @@
   @media (min-width: $desktop-width) {
     background-image:
       linear-gradient(to top,
-      $color-gray-950 44px,
-      $color-gray-930 44px,
+      $color-gray-950 42px,
+      $color-gray-930 42px,
       $color-gray-930 43px,
-      $color-white 44px);
+      $color-white 43px);
   }
 
   &--index {
@@ -34,10 +37,10 @@
     @media (min-width: $desktop-width) {
       background-image:
         linear-gradient(to top,
-        $color-gray-980 44px,
-        $color-gray-930 44px,
+        $color-gray-980 42px,
+        $color-gray-930 42px,
         $color-gray-930 43px,
-        $color-white 44px);
+        $color-white 43px);
     }
   }
 }
