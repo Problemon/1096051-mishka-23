@@ -42,7 +42,7 @@
   border: 1px solid $color-gray-930;
 
   order: 1;
-  z-index: -1;
+  z-index: 1;
   transition: box-shadow 0.3s ease;
 
   @media (min-width: $tablet-width) {
@@ -138,25 +138,25 @@
 
   &:hover,
   &:focus {
-    .product__basket-path {
-      fill: $color-emerald;
+    .product__basket-icon {
+      color: $color-emerald;
     }
   }
 
   &:active {
-    .product__basket-path {
-      fill: rgba($color-emerald, 0.3);
+    .product__basket-icon {
+      color: rgba($color-emerald, 0.3);
     }
   }
 }
 
-.product__basket-path {
-  fill: rgba($color-black, 0.2);
-  transition: fill 0.2s ease;
+.product__basket-icon {
+  color: rgba($color-black, 0.2);
+  transition: color 0.2s ease;
 }
 
 .product__image {
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
 }
