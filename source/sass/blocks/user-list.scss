@@ -25,16 +25,16 @@
 
   &:hover,
   &:focus {
-    .user-list__search-path,
-    .user-list__basket-path {
-      fill: $color-emerald;
+    .user-list__search-icon,
+    .user-list__basket-icon {
+      color: $color-emerald;
     }
   }
 
   &:active {
-    .user-list__search-path,
-    .user-list__basket-path {
-      fill: rgba($color-emerald, 0.3);
+    .user-list__search-icon,
+    .user-list__basket-icon {
+      color: rgba($color-emerald, 0.3);
     }
   }
 
@@ -65,13 +65,9 @@
   top: 50%;
   left: 30px;
   transform: translateY(-50%);
-}
 
-.user-list__search-path,
-.user-list__basket-path {
-  fill: rgba($color-black, 0.2);
-
-  transition: fill 0.1s;
+  color: rgba($color-black, 0.2);
+  transition: color 0.1s;
 }
 
 .user-list__search-icon {
