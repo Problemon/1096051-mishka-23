@@ -14,7 +14,7 @@
     padding-bottom: 132px;
 
     background-image:
-      url("../img/backgrounds/rug@1x.jpg"),
+      url("../img/background/rug@1x.jpg"),
       url("../img/icons/zigzag.svg");
     background-repeat:
       no-repeat,
@@ -28,7 +28,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image:
-        url("../img/backgrounds/rug@2x.jpg"),
+        url("../img/background/rug@2x.jpg"),
         url("../img/icons/zigzag.svg");
     }
   }
@@ -111,7 +111,7 @@
 
 .reviews__author-nickname {
   display: block;
-  padding-top: 5px;
+  padding-top: 2px;
   line-height: 30px;
   font-weight: 400;
 

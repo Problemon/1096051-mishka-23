@@ -73,6 +73,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    align-items: start;
     padding-top: 20px;
 
     &::after {

@@ -19,11 +19,12 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
     row-gap: 43px;
   }
 
   @media (min-width: $desktop-width) {
+    column-gap: 23px;
+
     padding-left: 175px;
     padding-right: 200px;
   }

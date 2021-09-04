@@ -1,6 +1,10 @@
 .form {
   padding-top: 17px;
   padding-bottom: 55px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 48px;
+  }
 }
 
 .form__text {
@@ -18,8 +22,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 174px;
-    padding-right: 174px;
+    padding-left: 225px;
+    padding-right: 225px;
   }
 }
 

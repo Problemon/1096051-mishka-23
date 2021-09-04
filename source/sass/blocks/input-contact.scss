@@ -67,8 +67,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 15px;
-
     &::after {
       display: none;
     }
@@ -90,6 +88,10 @@
   @media (min-width: $tablet-width) {
     grid-column: 2/3;
     right: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 5px;
   }
 }
 

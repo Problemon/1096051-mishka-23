@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 150px;
+    margin-bottom: 127px;
   }
 }
 
@@ -26,16 +26,24 @@
 .main__production {
   margin-bottom: 58px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 104px;
   }
 }
 
 .main__categories {
-  margin-bottom: 55px;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 63px;
+    margin-bottom: 58px;
   }
 }
 
@@ -89,6 +97,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 124px;
+    margin-bottom: 99px;
   }
 }

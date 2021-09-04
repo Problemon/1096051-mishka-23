@@ -13,7 +13,7 @@
       "info    img"
       "price   img"
       "button  img";
-    column-gap: 58px;
+    column-gap: 42px;
 
     padding-bottom: 69px;
 
@@ -28,6 +28,7 @@
       ".       info    img"
       ".       price   img"
       ".       button  img";
+    column-gap: 58px;
 
     padding-bottom: 96px;
 
@@ -169,10 +170,10 @@
 
   @media (min-width: $tablet-width) {
     grid-area: img;
-    justify-self: end;
+    align-self: auto;
 
     width: 334px;
-    height: 404px;
+    height: 414px;
     margin-bottom: 0;
     padding-top: 10px;
   }

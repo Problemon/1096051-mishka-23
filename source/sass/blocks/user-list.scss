@@ -58,23 +58,28 @@
   }
 }
 
-.user-list__search-icon,
-.user-list__basket-icon {
+.user-list__search-icon {
   position: absolute;
+  top: calc(50% - 9px);
+  left: 32px;
 
-  top: 50%;
-  left: 30px;
-  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
 
   color: rgba($color-black, 0.2);
   transition: color 0.1s;
 }
 
-.user-list__search-icon {
-  @media (min-width: $tablet-width) {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.user-list__basket-icon {
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 30px;
+
+  width: 21px;
+  height: 18px;
+
+  color: rgba($color-black, 0.2);
+  transition: color 0.1s;
 }
 
 .user-list__link--basket {
