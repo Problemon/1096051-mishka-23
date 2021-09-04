@@ -126,10 +126,10 @@
 
   @media (min-width: $tablet-width) {
     grid-area: 2/2/3/3;
-    align-items: end;
-    margin-bottom: 0;
+    align-self: end;
 
-    z-index: -1;
+    margin-bottom: 0;
+    max-height: 52px;
   }
 }
 
