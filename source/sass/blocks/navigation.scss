@@ -2,7 +2,10 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: ".     logo  button";
+  grid-template-rows: 79px;
+  grid-template-areas:
+    ".     logo  button"
+    "menu  menu  menu";
   align-items: center;
 
   min-height: 79px;
@@ -109,11 +112,6 @@
 
   &--nojs {
     grid-area: menu;
-
-    .site-list__link,
-    .user-list__link {
-      padding-left: 46px;
-    }
   }
 
   &--hidden {
@@ -190,6 +188,17 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+.navigation__sale-link {
+  &:focus,
+  &:hover {
+    color: rgba($color-black, 0.6);
+  }
+
+  &:active {
+    color: rgba($color-black, 0.3);
   }
 }
 

@@ -1,0 +1,43 @@
+.br {
+  content: "";
+
+  &::after {
+    content: "\00a0";
+  }
+
+  &--desktop {
+    @media (min-width: $desktop-width) {
+      content: normal;
+    }
+
+    &::after {
+      @media (min-width: $desktop-width) {
+        content: "";
+      }
+    }
+  }
+
+  &--tablet {
+    @media (max-width: 1149px) {
+      content: normal;
+    }
+
+    &::after {
+      @media (max-width: 1149px) {
+        content: "";
+      }
+    }
+  }
+
+  &--mobile {
+    @media (max-width: 767px) {
+      content: normal;
+    }
+
+    &::after {
+      @media (max-width: 767px) {
+        content: "";
+      }
+    }
+  }
+}

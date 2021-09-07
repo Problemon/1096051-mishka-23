@@ -10,7 +10,7 @@
   transition: border-color 0.3s ease;
 
   &:hover {
-    border-color: $color-black;
+    border-color: rgba($color-gray-270, 0.3);
   }
 }
 

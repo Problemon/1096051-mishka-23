@@ -29,12 +29,22 @@
     .user-list__basket-icon {
       color: $color-emerald;
     }
+
+    .user-list__basket-text,
+    .user-list__search-text {
+      color: rgba($color-black, 0.6);
+    }
   }
 
   &:active {
     .user-list__search-icon,
     .user-list__basket-icon {
       color: rgba($color-emerald, 0.3);
+    }
+
+    .user-list__basket-text,
+    .user-list__search-text {
+      color: rgba($color-black, 0.3);
     }
   }
 

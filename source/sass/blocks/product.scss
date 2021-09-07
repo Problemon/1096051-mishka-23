@@ -79,22 +79,21 @@
 
   transition: opacity 0.2s ease;
 
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
   @media (min-width: 600px) {
     font-size: 20px;
   }
 }
 
-.product__name-link:focus {
+.product__name-link:focus,
+.product__name-link:hover {
   .product__name {
     opacity: 0.6;
+  }
+}
+
+.product__name-link:active {
+  .product__name {
+    opacity: 0.3;
   }
 }
 
