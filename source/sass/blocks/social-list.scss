@@ -10,7 +10,7 @@
   padding-bottom: 16px;
   padding-left: 30px;
   margin: 0;
-  border-bottom: 1px solid darken($color-white, 10);
+  border-bottom: 1px solid $color-gray-900;
 
   list-style: none;
 
@@ -24,8 +24,21 @@
 }
 
 .social-list__item {
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.social-list__link {
+  display: block;
+
+  padding: 5px;
+
+  &:focus,
+  &:hover {
+    color: $color-emerald;
+  }
+
+  &:active {
+    color: rgba($color-emerald, 0.3);
+  }
 }

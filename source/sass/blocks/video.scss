@@ -141,6 +141,11 @@
     transform: scale(0.8);
     opacity: 0.3;
   }
+
+  @media (min-width: $desktop-width) {
+    top: 189px;
+    left: 291px;
+  }
 }
 
 .video__info {

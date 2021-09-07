@@ -101,13 +101,21 @@
 
 .contacts__link--email {
   border-bottom: 1px solid $color-emerald;
+
+  &:focus,
+  &:hover {
+    color: $color-emerald;
+  }
+
+  &:active {
+    border-color: rgba($color-emerald, 0.1);
+  }
 }
 
 .contacts__location {
   display: flex;
   align-items: baseline;
 
-  padding-right: 15px;
   margin: 0;
 }
 

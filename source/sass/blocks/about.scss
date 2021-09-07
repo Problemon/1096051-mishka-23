@@ -1,6 +1,10 @@
 .about__title {
   margin-top: 0;
-  margin-bottom: 31px;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
 
   @media (min-width: $desktop-width) {
     padding-left: 175px;
@@ -19,11 +23,13 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 43px;
+    row-gap: 55px;
+
+    padding-top: 10px;
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 23px;
+    column-gap: 18px;
 
     padding-left: 175px;
     padding-right: 200px;
@@ -36,45 +42,61 @@
 
   background-repeat: no-repeat;
 
+  &--ecology {
+    background-image: url("../img/icons/flower.svg");
+    background-position: 8px 0;
+  }
+
+  &--hand-made {
+    background-image: url("../img/icons/clew.svg");
+    background-position: 3px 3px;
+
+    @media (min-width: $desktop-width) {
+      background-position: 7px 3px;
+    }
+  }
+
+  &--price {
+    background-image: url("../img/icons/bill.svg");
+  }
+
+  &--support {
+    background-image: url("../img/icons/rocket.svg");
+    background-position: -2px 4px;
+  }
+
+  &--beautiful {
+    background-image: url("../img/icons/heart.svg");
+    background-position: 8px 6px;
+  }
+
+  &--gift {
+    background-image: url("../img/icons/gift.svg");
+    background-position: 3px 2px;
+
+    @media (min-width: $desktop-width) {
+      background-position: 7px 2px;
+    }
+  }
+
   &:nth-child(odd) {
     order: -1;
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 67px;
+    padding-top: 56px;
+    padding-right: 25px;
 
     &:nth-child(odd) {
       order: 0;
     }
   }
-}
 
-.about__item--ecology {
-  background-image: url("../img/icons/flower.svg");
-  background-position-x: 8px;
-}
-
-.about__item--hand-made {
-  background-image: url("../img/icons/clew.svg");
-  background-position-x: 3px;
-}
-
-.about__item--price {
-  background-image: url("../img/icons/bill.svg");
-}
-
-.about__item--support {
-  background-image: url("../img/icons/rocket.svg");
-}
-
-.about__item--beautiful {
-  background-image: url("../img/icons/heart.svg");
-  background-position-x: 7px;
-}
-
-.about__item--gift {
-  background-image: url("../img/icons/gift.svg");
-  background-position-x: 3px;
+  @media (min-width: $desktop-width) {
+    &:nth-child(even) {
+      padding-left: 5px;
+    }
+  }
 }
 
 .about__text {

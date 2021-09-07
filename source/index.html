@@ -18,14 +18,14 @@
 </head>
 <body class="page__body">
 
-  <header class="page__page-header page-header page-header--index">
+  <header class="page__page-header page-header page-header--nojs page-header--index">
     <div class="page-header__container container container--mobile">
       <nav class="page-header__navigation navigation">
         <a class="navigation__link-logo logo">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="logo__icon" src="img/logo-mobile.svg" width="86" height="35" alt="">
+            <img class="logo__icon logo__icon--disabled" src="img/logo-mobile.svg" width="86" height="35" alt="">
           </picture>
         </a>
         <button class="navigation__button navigation__button--nojs">
@@ -46,7 +46,7 @@
                 <svg class="user-list__search-icon" width="18" height="18" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg>
-                <span class="visually-hidden visually-hidden--mobile">Поиск по сайту</span>
+                <span class="user-list__search-text visually-hidden visually-hidden--mobile">Поиск по сайту</span>
               </a>
             </li>
             <li class="user-list__item">
@@ -76,13 +76,23 @@
 
     <section class="main__categories categories">
       <div class="categories__container container container--mobile">
-        <h2 class="categories__heading">Милые штуки ручной работы для дома</h2>
+        <h2 class="categories__heading">
+          Милые штуки
+          <br class="br br--mobile">
+          ручной
+          <br class="br br--mobile br--tablet  br--desktop">
+          работы для дома
+        </h2>
         <ul class="categories__list">
           <li class="categories__item">
-            <a class="categories__link categories__link--interior" href="#">Предметы интерьера</a>
+            <a class="categories__link categories__link--interior" href="#">
+              <span class="categories__link-text">Предметы интерьера</span>
+            </a>
           </li>
           <li class="categories__item">
-            <a class="categories__link categories__link--toy" href="#">Детские игрушки</a>
+            <a class="categories__link categories__link--toy" href="#">
+              <span class="categories__link-text">Детские игрушки</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -131,22 +141,22 @@
         <h2 class="about__title title">Коротко о нас:</h2>
         <ul class="about__list">
           <li class="about__item about__item--ecology">
-            <p class="about__text">Экологически чистые материалы</p>
+            <p class="about__text">Экологически<br>чистые материалы</p>
           </li>
           <li class="about__item about__item--hand-made">
-            <p class="about__text">Связано вручную с любовью и умилением</p>
+            <p class="about__text">Связано вручную<br>с любовью и умилением</p>
           </li>
           <li class="about__item about__item--price">
-            <p class="about__text">Скандинавский стиль по российской цене</p>
+            <p class="about__text">Скандинавский стиль<br>по российской цене</p>
           </li>
           <li class="about__item about__item--support">
             <p class="about__text">Поддержка отечественного производителя</p>
           </li>
           <li class="about__item about__item--beautiful">
-            <p class="about__text">Увеличивает лайки на фотографиях</p>
+            <p class="about__text">Увеличивает лайки<br>на фотографиях</p>
           </li>
           <li class="about__item about__item--gift">
-            <p class="about__text">Поставляется в подарочной упаковке</p>
+            <p class="about__text">Поставляется<br>в подарочной упаковке</p>
           </li>
         </ul>
       </div>
@@ -213,7 +223,12 @@
             e-mail: <a class="contacts__link contacts__link--email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           </p>
           <p class="contacts__location">
-            адрес: <a class="contacts__link" href="https://goo.gl/maps/ZjrHePncgdSXjLdT8">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</a>
+            адрес:
+            <a class="contacts__link" href="https://goo.gl/maps/ZjrHePncgdSXjLdT8">
+              г. Санкт-Петербург<br>
+              ул. Большая Конюшенная<br>
+              д. 19/8, офис 101
+            </a>
           </p>
         </address>
         <div class="contacts__map" id="map"></div>
@@ -224,7 +239,9 @@
   <footer class="page__page-footer page-footer">
     <div class="page-footer__container container">
       <a class="page-footer__link-logo logo">
-        <img class="logo__footer-icon" src="img/logo-footer.svg" width="101" height="34" alt="">
+        <svg class="logo__footer-icon logo__footer-icon--disabled" width="101" height="34" alt="">
+          <use xlink:href="img/sprite.svg#logo-footer"></use>
+        </svg>
       </a>
       <ul class="social-list">
         <li class="social-list__item">
@@ -256,7 +273,9 @@
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="copyright__text">Разработано <span class="visually-hidden">на интенсиве HTMLacademy</span></p>
-          <img class="copyright__icon" src="img/icon-htmlacademy.svg" aria-hidden="true" width="27" height="34"  alt="">
+          <svg class="copyright__icon" aria-hidden="true" width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
         </a>
       </div>
 

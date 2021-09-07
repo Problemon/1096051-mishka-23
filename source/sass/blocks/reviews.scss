@@ -42,7 +42,7 @@
       50px 0,
       0 100%;
     background-size:
-      auto auto,
+      350px 457px,
       80% 23px;
   }
 }
@@ -81,7 +81,7 @@
 
 .reviews__text {
   margin-top: 0;
-  margin-bottom: 33px;
+  margin-bottom: 36px;
 
   font-size: 15px;
   line-height: 30px;
@@ -94,6 +94,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 40px;
+    padding-right: 70px;
   }
 }
 
@@ -104,8 +105,13 @@
   font-style: normal;
 
   @media (min-width: $tablet-width) {
+    font-size: 18px;
     padding-right: 175px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 17px;
   }
 }
 
@@ -116,6 +122,7 @@
   font-weight: 400;
 
   @media (min-width: $tablet-width) {
+    font-size: 17px;
     line-height: 30px;
     padding-top: 0;
   }
@@ -126,10 +133,10 @@
 
   @media (min-width: $tablet-width) {
     grid-area: 2/2/3/3;
-    align-items: end;
-    margin-bottom: 0;
+    align-self: end;
 
-    z-index: -1;
+    margin-bottom: 0;
+    max-height: 52px;
   }
 }
 

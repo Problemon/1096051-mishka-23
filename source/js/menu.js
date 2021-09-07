@@ -1,7 +1,10 @@
+const pageHeader = document.querySelector(".page-header");
 const menuButton = document.querySelector(".navigation__button");
 const menu = document.querySelector(".navigation__menu");
 const userLinks = document.querySelectorAll(".user-list__link");
 
+
+pageHeader.classList.remove("page-header--nojs");
 menuButton.classList.remove("navigation__button--nojs"); // Если js не загрузился.
 menuButton.classList.add("navigation__button--closed");
 swapClass(menu, "navigation__menu--nojs", "navigation__menu--hidden")
