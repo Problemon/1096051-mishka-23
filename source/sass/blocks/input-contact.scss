@@ -13,6 +13,7 @@
 
 .input-contact__input {
   padding-top: 17px;
+  padding-right: 50px;
   padding-bottom: 17px;
   border: none;
   border-bottom: 2px solid $color-black;
@@ -32,10 +33,14 @@
   @media (min-width: $tablet-width) {
     padding-top: 14px;
     padding-bottom: 15px;
-    padding-right: 16px;
+    padding-right: 70px;
     padding-left: 16px;
 
     font-size: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 50px;
   }
 }
 
@@ -67,8 +72,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 15px;
-
     &::after {
       display: none;
     }
@@ -90,6 +93,10 @@
   @media (min-width: $tablet-width) {
     grid-column: 2/3;
     right: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 5px;
   }
 }
 

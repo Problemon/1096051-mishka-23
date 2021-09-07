@@ -21,6 +21,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 174px 1fr;
+    padding-top: 49px;
 
     &--small {
       grid-template-columns: 1fr 4fr 1fr;

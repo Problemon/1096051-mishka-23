@@ -82,7 +82,7 @@ exports.copyImages = copyImages;
 // WebP
 
 const createWebp = () => {
-  return gulp.src(["source/img/**/*.{jpg,png}", "!source/img/backgrounds/*.{jpg,png}"])
+  return gulp.src(["source/img/**/*.{jpg,png}", "!source/img/background/*.{jpg,png}"])
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 }
@@ -151,7 +151,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 

@@ -39,7 +39,7 @@ img {
   clip: rect(0 0 0 0);
 
   &--mobile {
-    @media (max-width: $tablet-width) {
+    @media (max-width: 765px) {
       position: static;
       width: auto;
       height: auto;

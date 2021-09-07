@@ -1,5 +1,5 @@
 .copyright {
-  padding-top: 10px;
+  padding-top: 22px;
   padding-left: 39px;
   padding-right: 39px;
   padding-bottom: 22px;
@@ -13,6 +13,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  color: $color-emerald;
+
+  &:focus,
+  &:hover {
+    color: $color-emerald-darken;
+  }
+
+  &:active {
+    color: rgba($color-emerald-darken, 0.3);
+  }
 }
 
 .copyright__text {
@@ -21,6 +32,7 @@
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
+  color: $color-black;
 
   @media (min-width: $tablet-width) {
     margin-right: 30px;

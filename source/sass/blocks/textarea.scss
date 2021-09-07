@@ -25,6 +25,7 @@
 
   line-height: 18px;
   resize: none;
+  outline: none;
 
   transition: border-color 0.2s;
 
@@ -73,6 +74,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    align-items: start;
     padding-top: 20px;
 
     &::after {

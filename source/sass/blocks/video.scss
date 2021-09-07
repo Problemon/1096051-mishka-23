@@ -59,7 +59,7 @@
 
   background-image: url("../img/icons/camera.svg");
   background-repeat: no-repeat;
-  background-position: 34px 21px;
+  background-position: 34px 34px;
 
   @media (min-width: $tablet-width) {
     padding-top: 41px;
@@ -108,9 +108,8 @@
 .video__button {
   position: absolute;
 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(50% - 38.5px);
+  left: calc(50% - 50px);
 
   width: 100px;
   height: 77px;
@@ -125,9 +124,8 @@
     content: "";
     position: absolute;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -50%);
+    top: calc(50% - 18px);
+    left: calc(50% - 12px);
 
     border-left: 30px solid $color-white;
     border-top: 18px solid transparent;
@@ -136,12 +134,17 @@
 
   &:hover,
   &:focus {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: scale(1.2);
   }
 
   &:active {
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: scale(0.8);
     opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 189px;
+    left: 291px;
   }
 }
 
@@ -174,7 +177,7 @@
 
 .video__description {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 41px;
 
   font-size: 13px;
   color: $color-gray-270;

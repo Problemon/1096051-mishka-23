@@ -31,29 +31,45 @@
   flex-direction: column;
   justify-content: space-between;
 
-  min-height: 490px;
-  padding-top: 111px;
+  padding-top: 72px;
 
-  background-image: url("../img/backgrounds/toys-in-house@1x.jpg");
+  background-image: url("../img/background/toys-in-house@1x.jpg");
   background-position: 50% -15px;
   background-repeat: no-repeat;
   background-size: contain;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/backgrounds/toys-in-house@2x.jpg");
+    background-image: url("../img/background/toys-in-house@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
-    background-image: url("../img/backgrounds/toys-in-house-tablet@1x.jpg");
+    padding-top: 102px;
+
+    background-image: url("../img/background/toys-in-house-tablet@1x.jpg");
+    background-position: 50% -54px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/backgrounds/toys-in-house-tablet@2x.jpg");
+      background-image: url("../img/background/toys-in-house-tablet@2x.jpg");
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/background/toys-in-house-desktop@1x.jpg");
+    background-position: 50% -44px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/toys-in-house-desktop@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 114px;
   }
 }
 
 .categories__heading {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 121px;
   padding: 0 30px;
 
   text-align: center;
@@ -89,6 +105,7 @@
 }
 
 .categories__link {
+  position: relative;
   display: block;
   height: 100%;
   padding-top: 24px;
@@ -100,30 +117,54 @@
   font-weight: 700;
   color: $color-white;
   background-repeat: no-repeat;
+  outline-offset: 6px;
 
-  &--interior {
-    background-color: $color-emerald;
-    background-image: url("../img/icons/interior.svg");
-    background-position: calc(100% - 36px) 50%;
+  transition: background 0.2s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    transition: top 0.2s ease;
   }
 
-  &--toy {
-    background-color: $color-emerald-darken;
-    background-image: url("../img/icons/toy.svg");
-    background-position: calc(100% - 27px) 50%;
+  &::after {
+    content: "";
+    position: absolute;
 
-    @media (min-width: $tablet-width) {
-      background-position: calc(100% - 33px) 50%;
+    left: 0;
+    bottom: calc(100% - 5px);
+
+    width: 100%;
+    height: 5px;
+
+    background-color: inherit;
+
+    transition: bottom 0.2s ease;
+  }
+
+  &:focus,
+  &:hover {
+    .categories__link-text {
+      position: relative;
+      top: -5px;
     }
 
-    @media (min-width: $desktop-width) {
-      background-position: calc(100% - 35px) 50%;
+    &::after {
+      bottom: 100%;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
     }
   }
 
   @media (min-width: $tablet-width) {
-    padding-right: 150px;
     padding-top: 26px;
+    padding-right: 150px;
+    padding-bottom: 33px;
     padding-left: 36px;
 
     font-size: 20px;
@@ -133,4 +174,61 @@
   @media (min-width: $desktop-width) {
     padding-right: 320px;
   }
+}
+
+.categories__link--interior {
+  background-color: $color-emerald;
+
+  &::before {
+    top: calc(50% - 30px);
+    right: 36px;
+
+    height: 60px;
+    width: 40px;
+
+    background-image: url("../img/icons/interior.svg");
+  }
+
+  &:focus,
+  &:hover {
+    &::before {
+      top: calc(50% - 35px);
+    }
+  }
+}
+
+.categories__link--toy {
+  background-color: $color-emerald-darken;
+
+  &::before {
+    top: calc(50% - 30px);
+    right: 27px;
+
+    height: 60px;
+    width: 60px;
+
+    background-image: url("../img/icons/toy.svg");
+
+    @media (min-width: $tablet-width) {
+      right: 33px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 35px;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $color-emerald-darken-richer;
+
+    &::before {
+      top: calc(50% - 35px);
+    }
+  }
+}
+
+.categories__link-text {
+  top: 0;
+  transition: top 0.2s ease;
 }

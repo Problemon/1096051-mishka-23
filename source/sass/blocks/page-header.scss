@@ -4,6 +4,10 @@
 
   background-color: $color-white;
 
+  &--nojs {
+    padding: 0;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0;
     border-bottom: none;

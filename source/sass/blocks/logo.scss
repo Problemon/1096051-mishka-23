@@ -2,6 +2,7 @@
   width: 86px;
   height: 35px;
 
+
   @media (min-width: $tablet-width) {
     height: 46px;
     width: 113px;
@@ -16,4 +17,41 @@
 .logo__footer-icon {
   width: 101px;
   height: 34px;
+}
+
+.logo:focus,
+.logo:hover {
+  .logo__icon {
+    opacity: 0.6;
+
+    &--disabled {
+      opacity: 1;
+    }
+  }
+
+  .logo__footer-icon {
+    color: $color-emerald;
+
+    &--disabled {
+      color: $color-black;
+    }
+  }
+}
+
+.logo:active {
+  .logo__icon {
+    opacity: 0.3;
+
+    &--disabled {
+      opacity: 1;
+    }
+  }
+
+  .logo__footer-icon {
+    color: rgba($color-emerald, 0.3);
+
+    &--disabled {
+      color: $color-black;
+    }
+  }
 }
